@@ -16,6 +16,19 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# Gems for authentication & authorisation
+gem 'devise'
+gem 'pundit'
+
+# LinkedIn API
+gem 'omniauth'
+gem 'omniauth-linkedin-oauth2'
+
+# Gem for custom-search
+gem 'pg_search'
+
+
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
