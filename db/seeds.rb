@@ -5,3 +5,61 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Drop db on re-seed
+p "Dropping reviews"
+Review.destroy_all
+p "Reviews dropped"
+p "Dropping old companies table"
+Company.destroy_all
+p "Companies dropped"
+p "Deleting industries"
+Industry.destroy_all
+"Industries destroyed"
+p "Deleting users"
+User.destroy_all
+p "Users dropped"
+
+
+5.times do
+  p "creating industry"
+  industry = Industry.new(
+  name: Faker::Company.industry
+  )
+  industry.save!
+end
+5.times do
+  p "creating company"
+  company = Company.new(
+    name: Faker::Company.name,
+    description: Faker::Company.catch_phrase,
+    industry: Industry.all.sample
+  )
+  company.save!
+end
+
+
+
+
+
+# Destroy all previous db entries
+# Review.destroy_all
+# Booking.destroy_all
+# Pet.destroy_all
+# User.destroy_all
+
+# 5.times do
+#   user = User.new(
+#   email: Faker::Internet.email,
+#   password: 'abc123',
+# )
+# user.save!
+# pet = Pet.new(
+#     name: Faker::Dog.name,
+#     species: "dog",
+#     address: Faker::Address.full_address,
+#     size: ["microscopic", "small", "medium", "large", "extra-large", "monster-sized"].sample,
+#     details: Faker::Seinfeld.quote,
+#     owner: user
+#     )
+#   pet.save!
+# end
