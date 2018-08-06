@@ -1,0 +1,8 @@
+<h1>Companies#Show</h1>
+<h2><%= @company.name %></h2>
+<%= link_to "Review #{@company.name}", new_company_review_path(@company)  %>
+<h3>Reviews</h3>
+<% @company.reviews.each do |review| %>
+ <p><%= review.content %> </p>
+ <p><%= review.user_position %> || <%= review.user_area %></p>
+<% end %>
