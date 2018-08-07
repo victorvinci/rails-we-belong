@@ -1,13 +1,16 @@
+.carousel-inner .item {
+  margin: 0 !important;
+  background-image: linear-gradient(-225deg, rgba(0,20,0,0.6) 0%, rgba(20,0,0,0.6) 50%);
+  background-size: cover;
+  height: 100vh;
+}
 
 li .values {
   text-decoration: none;
   color: inherit;
-
-
   &:hover{
-    color: lightgray;
+    color: red;
   }
 }
-
 
 
