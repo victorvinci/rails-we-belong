@@ -15,6 +15,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'bootstrap-popover-rails'
 
 # Gems for authentication & authorisation
 gem 'devise'

@@ -1,1 +1,13 @@
-// Specific CSS for your home-page
+
+li .values {
+  text-decoration: none;
+  color: inherit;
+
+
+  &:hover{
+    color: lightgray;
+  }
+}
+
+
+

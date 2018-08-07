@@ -1,0 +1,9 @@
+<%= simple_form_for [ @review, @answer] do |f| %>
+  <%= f.input :answer_1, as: :radio_buttons %>
+  <%= f.input :answer_2, as: :radio_buttons %>
+  <%= f.input :answer_3, as: :radio_buttons %>
+  <%= f.input :answer_4, as: :radio_buttons %>
+  <%= f.input :answer_5, as: :radio_buttons %>
+  <%= f.input :content, as: :text %>
+  <%= f.button :submit, "Create", class: "btn btn-primary" %>
+<% end %>
