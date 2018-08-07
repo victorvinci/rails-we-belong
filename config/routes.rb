@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       resources :answers, only: %i[show new create]
     end
   end
+
+  resources :employee_profiles, except: :index
 end

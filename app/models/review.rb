@@ -5,8 +5,6 @@ class Review < ApplicationRecord
   accepts_nested_attributes_for :answer
   after_create :calculate_weighting
 
-  validate :exists?, on: :save
-  
   private
    def calculate_weighting
     self.answer.minority? ? self.weighting = 130 : 100
