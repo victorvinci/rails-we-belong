@@ -13,9 +13,9 @@
   <!-- fim logo -->
 
  <!--  SEARCH BAR START -->
-  <div id="custom-search-input">
-    <div class="input-group col-md-12">
-      <input type="text" class="form-control input-lg" placeholder="Buscar" />
+  <div id="custom-search-input" class="hidden-xs hidden-sm">
+    <div class="input-group col-md-12 hidden-xs hidden-sm">
+      <input type="text" class="form-control input-lg" placeholder="Procure empresas" />
       <span class="input-group-btn">
         <button class="btn btn-info btn-lg" type="button">
           <i class="glyphicon glyphicon-search"></i>
@@ -64,6 +64,18 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
+
+        <div id="custom-search-input-dropdown">
+          <div class="input-group col-md-12">
+            <input type="text" class="form-control input-lg" placeholder="Procura empresas" />
+            <span class="input-group-btn">
+              <button class="btn btn-info btn-lg" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+
         <% if user_signed_in? %>
           <li><a href="/pets">My Pets</a></li>
           <li><a href="/bookings">My Bookings</a></li>
