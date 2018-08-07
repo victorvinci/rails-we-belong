@@ -11,6 +11,21 @@
   <a href="/" class="navbar-wb-brand fas fa-universal-access">
     </a>
   <!-- fim logo -->
+
+ <!--  SEARCH BAR START -->
+  <div id="custom-search-input">
+    <div class="input-group col-md-12">
+      <input type="text" class="form-control input-lg" placeholder="Buscar" />
+      <span class="input-group-btn">
+        <button class="btn btn-info btn-lg" type="button">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </span>
+    </div>
+  </div>
+
+<!--   SEARCH BAR END -->
+
   <!-- Align right -->
   <div class="navbar-wb-right hidden-xs hidden-sm">
     <!--       links navbar -->
@@ -31,9 +46,9 @@
 
           <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
-          <li><a href="/pets">My Pets</a></li>
-          <li><a href="/bookings">My Bookings</a></li>
-          <li><a href="/users/edit">Edit Profile</a></li>
+          <li><a href="#">My Pets</a></li>
+          <li><a href="#">My Bookings</a></li>
+          <li><a href="#">Edit Profile</a></li>
             <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
           <% else %>
             <li><a data-method="get" href="/users/sign_in">Log In</a></li>
