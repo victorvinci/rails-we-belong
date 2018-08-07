@@ -65,17 +65,20 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
 
-        <div id="custom-search-input-dropdown">
-          <div class="input-group col-md-12">
-            <input type="text" class="form-control input-lg" placeholder="Procure empresas" />
-            <span class="input-group-btn">
-              <button class="btn btn-info btn-lg" type="button">
-                <i class="glyphicon glyphicon-search"></i>
-              </button>
-            </span>
+        <li>
+          <div id="custom-search-input-dropdown">
+            <div class="input-group col-md-12">
+              <input type="text" class="form-control input-lg" placeholder="Procure empresas" />
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </span>
+            </div>
           </div>
-        </div>
-
+        </li>
+        <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a></li>
+        <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a></li>
         <% if user_signed_in? %>
           <li><a href="/pets">My Pets</a></li>
           <li><a href="/bookings">My Bookings</a></li>
