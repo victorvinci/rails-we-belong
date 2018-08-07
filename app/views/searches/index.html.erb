@@ -1,0 +1,29 @@
+<h1>Searches#index</h1>
+<p>Find me in app/views/searches/index.html.erb</p>
+<div>
+    <%= form_tag searches_index_path, method: :get do%>
+  <%= text_field_tag :query,
+    params[:query], id: "searchbar", placeholder: "Find a company"%>
+  <%= submit_tag "Search" %>
+  <% end %>
+
+  <h1> Results for <strong><%= params[:query] %></strong></h1>
+  <% unless @results.empty?  %>
+    <% @results.each do |result| %>
+        <div>
+          <p><%= result.company.name %></p>
+        </div>
+        <div>
+          <p><%= result.content %></p>
+        </div>
+    <% end %>
+  <% end %>
+
+  <% if @results.empty? %>
+        <% @companies.each do |result| %>
+        <div>
+          <p><%= result.name %></p>
+        </div>
+
+    <% end %>
+  <% end %>

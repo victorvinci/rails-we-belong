@@ -4,9 +4,4 @@ class PagesController < ApplicationController
   def home
   end
 
-  def results
-    @results_name = Company.search_by_name(params[:query])
-    @results_industry = Company.search_by_industry(params[:query])
-    @results_global = Company.global_search(params[:query])
-  end
 end
