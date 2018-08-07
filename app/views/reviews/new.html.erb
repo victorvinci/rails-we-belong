@@ -13,5 +13,15 @@
    <%= f.input :user_area %>
    <%= f.input :user_position %>
    <%= f.input :content %>
+    <%= f.simple_fields_for :answer do |a| %>
+
+    <% collection = [['N/A', '0'], ['Strongly Disagree', '1'], ['Disagree', '2'], ['Neutral', '3'], ['Agree', '4'], ['Strongly Agree', '5']] %>
+      <%= a.input :answer_1, as: :radio_buttons, collection: collection, label: "Question 1 goes here" %>
+      <%= a.input :answer_2, as: :radio_buttons, collection: collection, label: "Question 2 goes here" %>
+      <%= a.input :answer_3, as: :radio_buttons, collection: collection, label: "Question 3 goes here" %>
+      <%= a.input :answer_4, as: :radio_buttons, collection: collection, label: "Question 4 goes here" %>
+      <%= a.input :answer_5, as: :radio_buttons, collection: collection, label: "Question 5 goes here" %>
+      <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Are you part of a minority?" %>
+   <% end  %>
    <%= f.button :submit %>
 <% end %>

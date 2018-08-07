@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="wrapper">
+
+  <div class="container" style="margin: 0; padding: 0; width: 100%;">
+    <%= render "carousel" %>
+  </div>
+
+  <div class="container" style="margin: 40px; padding: 40px; height: 100vh;">
+    <%= render "steps" %>
+  </div>
+
+  <div class="container" style="margin: 24px; height: 100vh;">
+  <%= render "values" %>
+  </div>
+
+</div>

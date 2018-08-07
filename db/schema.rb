@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_190537) do
+ActiveRecord::Schema.define(version: 2018_08_07_134707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.integer "importance_1"
+    t.integer "weighting_1"
+    t.integer "answer_1"
+    t.integer "importance_2"
+    t.integer "weighting_2"
+    t.integer "answer_2"
+    t.integer "importance_3"
+    t.integer "weighting_3"
+    t.integer "answer_3"
+    t.integer "importance_4"
+    t.integer "weighting_4"
+    t.integer "answer_4"
+    t.integer "importance_5"
+    t.integer "weighting_5"
+    t.integer "answer_5"
+    t.boolean "minority"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_answers_on_review_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -59,6 +82,7 @@ ActiveRecord::Schema.define(version: 2018_08_06_190537) do
     t.string "user_area"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "weighting"
     t.index ["company_id"], name: "index_reviews_on_company_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -80,6 +104,7 @@ ActiveRecord::Schema.define(version: 2018_08_06_190537) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "reviews"
   add_foreign_key "companies", "industries"
   add_foreign_key "employee_profiles", "users"
   add_foreign_key "representative_profiles", "companies"
