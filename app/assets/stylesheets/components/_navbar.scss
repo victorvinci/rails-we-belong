@@ -53,37 +53,7 @@
   text-decoration: none;
 }
 
-/* Dropdown menu */
-.navbar-wb-dropdown-menu {
-  margin-top: 15px;
-  box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
-}
-.navbar-wb-dropdown-menu li > a {
-  transition: color 0.3s ease;
-  font-weight: lighter !important;
-  color: #999999 !important;
-  font-size: 15px !important;
-  line-height: 22px !important;
-  padding: 10px 20px;
-}
-.navbar-wb-dropdown-menu li > a:hover {
-  background: transparent !important;
-  color: black !important;
-}
-.navbar-wb-dropdown-menu:before {
-  content: ' ';
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  right: 10px;
-  top: -6px;
-  background-color: white;
-  transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
-}
-
+// START SEARCH NAVBAR
 
 #custom-search-input{
     border: solid 1px #E4E4E4;
@@ -119,11 +89,46 @@
     font-size: 23px;
 }
 
+/* Dropdown menu */
+.navbar-wb-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-wb-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-wb-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-wb-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+
 .dropdown-menu {
   min-width: 280px;
   padding: 8px;
 
 }
+
+// END SEARCH NAVBAR
+
+// START SEARCH DROPDOWN
 
 #custom-search-input-dropdown{
     border: solid 1px #E4E4E4;
@@ -137,6 +142,7 @@
     border: 0;
     box-shadow: none;
     background: transparent;
+    font-size: 12px;
 }
 
 #custom-search-input-dropdown button{
@@ -158,3 +164,5 @@
 #custom-search-input-dropdown .glyphicon-search{
     font-size: 23px;
 }
+
+// END SEARCH DROPDOWN
