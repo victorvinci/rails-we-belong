@@ -36,13 +36,7 @@
  <!-- dropdown with avatar -->
     <div class="navbar-wb-item">
       <div class="dropdown">
-       <!--  <img src="https://avatars1.githubusercontent.com/u/38114468?v=4" class="avatar dropdown-toggle" id="navbar-wb-menu" data-toggle="dropdown"> -->
-
-       <% if !user_signed_in? || current_user.photo.nil? %>
          <i class="fas fa-address-card avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
-       <% else %>
-          <%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill, class: 'avatar dropdown-toggle', id: 'navbar-wb-menu', 'data-toggle' =>'dropdown' %>
-       <% end %>
 
           <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
