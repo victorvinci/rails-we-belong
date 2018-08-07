@@ -1,7 +1,8 @@
 /* _body.scss contains attributes (padding/margin) related to footer*/
 
 .footer {
-  position: absolute;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  position: fixed;
   bottom: 0;
   width: 100%;
   background: white;
@@ -11,7 +12,7 @@
   height: 60px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+
 }
 .footer-links {
   display: flex;
@@ -35,4 +36,9 @@
 .footer-copyright p {
   margin: 0;
   color: #C7C7C7;
+  font-size: 75%;
+}
+
+.footer-copyright {
+  display: block;
 }
