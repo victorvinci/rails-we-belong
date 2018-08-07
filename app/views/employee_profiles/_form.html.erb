@@ -1,0 +1,7 @@
+<%= simple_form_for @employee_profile do |f| %>
+  <%= f.input :sex, collection: %i[Man Woman], label: 'Biological Gender' %>
+  <%= f.input :sex, collection: %i[Man Woman], label: 'Gender Identity' %>
+  <%= f.input :sex, collection: %i[Man Woman], label: 'Age Group' %>
+  <%= f.input :sex, collection: %i[Man Woman], label: 'Sexual Identity' %>
+  <%= f.button :submit, "Create", class: "btn btn-primary" %>
+<% end %>
