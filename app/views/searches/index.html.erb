@@ -11,6 +11,7 @@
         </p>
       </div>
       <% end %>
+      <%= paginate @companies %>
   <% else %>
     <% @results.each do |result| %>
       <div>
@@ -27,4 +28,6 @@
         </p>
       </div>
       <% end %>
+      <%= paginate @results %>
   <% end %>
+

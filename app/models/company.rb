@@ -12,4 +12,5 @@ class Company < ApplicationRecord
                     :threshold => 0.1
                   }
                 }
+  paginates_per 5
 end
