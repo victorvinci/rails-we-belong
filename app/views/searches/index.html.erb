@@ -1,30 +1,34 @@
 <h1>Searches</h1>
-<div>
-    <%= form_tag searches_index_path, method: :get do%>
+<!--  <%= form_tag searches_index_path, method: :get do%>
     <%= text_field_tag :query,
     params[:query], id: "searchbar", placeholder: "Type a keyword"%>
     <%= submit_tag "Search" %>
-    <% end %>
-
-  <h3> Results for <strong><%= params[:query] %></strong></h3>
-
-      <% if @results.empty? && @companies.empty? %>
-      <p>Your search - <%= params[:query] %> - did not find any corresponding item. Please try another key word.</p>
+    <% end %> -->
+<h3> Results for <strong><%= params[:query] %></strong></h3>
+<% if @results.empty? && @companies.empty? %>
+  <p>Your search -
+    <%= params[:query] %> - did not find any corresponding item. Please try another key word.</p>
   <% elsif @results.empty? %>
-      <% @companies.each do |result| %>
+    <% @companies.each do |result| %>
       <div>
-        <p><%= result.name %></p>
+        <p>
+          <%= result.name %>
+        </p>
       </div>
       <% end %>
   <% else %>
-      <% @results.each do |result| %>
-        <div>
-          <p><%= result.company.name %></p>
-        </div>
-        <div>
-          <p><%= result.content %></p>
-        </div>
+    <% @results.each do |result| %>
+      <div>
+        <h4>Company:</h4>
+        <p>
+          <%= link_to result.company.name, company_path(result.company_id) %>
+        </p>
+      </div>
+      <div>
+        <h4>Reviews:</h4>
+        <p>
+          <%= result.content %>
+        </p>
+      </div>
       <% end %>
   <% end %>
-
-
