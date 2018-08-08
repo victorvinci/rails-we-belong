@@ -14,6 +14,7 @@ function initUpdateNavbarOnScroll() {
       })}
     else {
         navbar.classList.add('navbar-wb-pages');
+        document.getElementById('custom-search-input').classList.remove('hide');
       };
     }
 
