@@ -3,6 +3,7 @@ class Review < ApplicationRecord
   belongs_to :user
   belongs_to :company
   has_one :answer
+  has_many :votes
   accepts_nested_attributes_for :answer
   after_create :calculate_weighting
 
@@ -25,4 +26,5 @@ class Review < ApplicationRecord
     self.answer.minority? ? self.weighting = 130 : 100
     self.save!
   end
+
 end

@@ -1,0 +1,6 @@
+<%= simple_form_for @employee_profile do |f| %>
+  <%= f.input :sex, collection: ["Homem Cis", "Mulher Cis", "Homen Trans", "Mulher Trans", "Travesti", "Outros (Queer, Agênero, etc)"], label: 'Identidade de Gênero' %>
+  <%= f.input :sexual_orientation, collection: %i[ Assexual Bissexual Gay Lésbica Heterossexual Pansexual ], label: 'Orientação Sexual' %>
+  <%= f.input :sex, collection: %i[Man Woman], label: 'Age Group' %>
+  <%= f.button :submit, "Create", class: "btn btn-primary" %>
+<% end %>

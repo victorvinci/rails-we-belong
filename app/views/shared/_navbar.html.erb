@@ -13,14 +13,19 @@
   <!-- fim logo -->
 
  <!--  SEARCH BAR START -->
+
   <div id="custom-search-input" class="hidden-xs hidden-sm">
     <div class="input-group col-md-12 hidden-xs hidden-sm">
+<<<<<<< HEAD
           <%= form_tag searches_index_path, method: :get do %>
           <%= text_field_tag :query,
           params[:query], id: "custom-search-input", placeholder: "Type a keyword" %>
           <span><%= submit_tag "Search", name: nil, class: "input-group-btn btn btn-info" %></span>
           <% end %>
     <!--   <input type="text" class="form-control input-lg" placeholder="Procure empresas" /> -->
+=======
+      <input type="text" class="form-control input-lg" placeholder="Procure empresas ou temas de seu interesse">
+>>>>>>> master
       <span class="input-group-btn">
         <button class="btn btn-info" type="button">
           <i class="glyphicon glyphicon-search"></i>
@@ -34,13 +39,14 @@
   <!-- Align right -->
   <div class="navbar-wb-right hidden-xs hidden-sm">
     <!--       links navbar -->
-    <a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a>
+    <a href="/#values" class="navbar-wb-item navbar-wb-link">Nossos Valores</a>
     <a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a>
  <!--    fim links navbar -->
 
  <!-- dropdown with avatar -->
     <div class="navbar-wb-item">
       <div class="dropdown">
+
        <!--  <img src="https://avatars1.githubusercontent.com/u/38114468?v=4" class="avatar dropdown-toggle" id="navbar-wb-menu" data-toggle="dropdown"> -->
 
        <% if !user_signed_in? %>
@@ -49,11 +55,12 @@
           <i class="fas fa-address-card avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
        <% end %>
 
+
           <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
-          <li><a href="#">My Pets</a></li>
-          <li><a href="#">My Bookings</a></li>
-          <li><a href="#">Edit Profile</a></li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="/users/edit">My Profile</a></li>
             <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
           <% else %>
             <li><a data-method="get" href="/users/sign_in">Log In</a></li>
@@ -90,8 +97,8 @@
         <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a></li>
         <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a></li>
         <% if user_signed_in? %>
-          <li><a href="/pets">My Pets</a></li>
-          <li><a href="/bookings">My Bookings</a></li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
             <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
           <% else %>
             <li><a data-method="get" href="/users/sign_in">Log In</a></li>
