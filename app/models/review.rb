@@ -9,9 +9,10 @@ class Review < ApplicationRecord
 
   pg_search_scope :search,
       against: [ :content ],
-      associated_against: {
-        company: [ :name ]
-      },
+      # associated_against: {
+      #   company: [ :name ]
+      # },
+      :ranked_by => ":tsearch",
       using: {
         tsearch: { prefix: true, any_word: true },
         :trigram => {

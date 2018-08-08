@@ -16,16 +16,12 @@
 
   <div id="custom-search-input" class="hidden-xs hidden-sm">
     <div class="input-group col-md-12 hidden-xs hidden-sm">
-<<<<<<< HEAD
           <%= form_tag searches_index_path, method: :get do %>
           <%= text_field_tag :query,
           params[:query], id: "custom-search-input", placeholder: "Type a keyword" %>
           <span><%= submit_tag "Search", name: nil, class: "input-group-btn btn btn-info" %></span>
           <% end %>
     <!--   <input type="text" class="form-control input-lg" placeholder="Procure empresas" /> -->
-=======
-      <input type="text" class="form-control input-lg" placeholder="Procure empresas ou temas de seu interesse">
->>>>>>> master
       <span class="input-group-btn">
         <button class="btn btn-info" type="button">
           <i class="glyphicon glyphicon-search"></i>
