@@ -16,12 +16,14 @@
 
   <div id="custom-search-input" class="hidden-xs hidden-sm">
     <div class="input-group col-md-12 hidden-xs hidden-sm">
+
           <%= form_tag searches_index_path, method: :get do %>
           <%= text_field_tag :query,
           params[:query], id: "custom-search-input", placeholder: "Type a keyword" %>
           <span><%= submit_tag "Search", name: nil, class: "input-group-btn btn btn-info" %></span>
           <% end %>
     <!--   <input type="text" class="form-control input-lg" placeholder="Procure empresas" /> -->
+
       <span class="input-group-btn">
         <button class="btn btn-info" type="button">
           <i class="glyphicon glyphicon-search"></i>
@@ -42,7 +44,6 @@
  <!-- dropdown with avatar -->
     <div class="navbar-wb-item">
       <div class="dropdown">
-
        <!--  <img src="https://avatars1.githubusercontent.com/u/38114468?v=4" class="avatar dropdown-toggle" id="navbar-wb-menu" data-toggle="dropdown"> -->
 
        <% if !user_signed_in? %>
@@ -50,7 +51,6 @@
        <% else %>
           <i class="fas fa-address-card avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
        <% end %>
-
 
           <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
