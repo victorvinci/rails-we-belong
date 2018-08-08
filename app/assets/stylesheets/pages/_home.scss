@@ -31,6 +31,12 @@ li .values {
 #custom-search-home{
   margin-top: -300px;
   margin-bottom: 300px;
-  border-radius: 5px;
   width: 1000px;
+  margin-left: 80px;
+}
+
+.input-group {
+  .form-control{
+    border-radius: 20px;
+  }
 }
