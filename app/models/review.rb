@@ -8,7 +8,6 @@ class Review < ApplicationRecord
 
   private
    def calculate_weighting
-    binding.pry
     self.answer.minority? ? self.weighting = 130 : self.weighting = 100
     self.save!
    end

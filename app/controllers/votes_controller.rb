@@ -10,17 +10,29 @@ class VotesController < ApplicationController
       @vote.review = @review
       apply_score
       attempt_save
+    elsif vote_changed?
+      update
     else
-      redirect_to company_path(@review.company), notice: 'You have already voted for this review'
+      remove_vote
     end
+  end
+
+  def update
+    @vote = @review.votes.where(user_id: @user).first
+    @vote.update(vote_params)
+    2.times {apply_score}
+    attempt_update
   end
 
   private
 
   def not_yet_voted?
      @review = Review.find(params[:review_id])
-     binding.pry
      @review.votes.where(user_id: @user).empty?
+  end
+
+  def vote_changed?
+    @vote.vote_type != @review.votes.where(user_id: @user).first.vote_type
   end
 
   def set_review
@@ -29,6 +41,19 @@ class VotesController < ApplicationController
 
   def set_user
     @user = current_user
+  end
+
+  def remove_vote
+    binding.pry
+    @vote = @review.votes.where(user_id: @user).first
+    if @vote.vote_type == 'upvote'
+      @review.weighting -= 5
+    else
+      @review.weighting += 5
+    end
+    @review.save
+    @vote.destroy
+    redirect_to company_path(@review.company), notice: 'Vote removed!'
   end
 
   def vote_params
@@ -40,6 +65,14 @@ class VotesController < ApplicationController
       redirect_to company_path(@vote.review.company), notice: 'Vote was successfully created'
     else
       render :new
+    end
+  end
+
+  def attempt_update
+    if @vote.update
+      redirect_to company_path(@vote.review.company), notice: 'Vote changed!'
+    else
+      redirect_to company_path(@vote.review.company), notice: 'Something went wrong!'
     end
   end
 

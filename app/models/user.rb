@@ -8,8 +8,7 @@ class User < ApplicationRecord
   has_many :reviews
 
   has_one :employee_profile
-  accepts_nested_attributes_for :employee_profile
 
   validates :role, inclusion: { in: %w(employee representative),
-    message: "%{value} is not a valid role type" }
+    message: "%{value} is not a valid role type" }, allow_nil: true
 end
