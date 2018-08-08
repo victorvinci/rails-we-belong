@@ -5,9 +5,9 @@
 <% @company.reviews.each do |review| %>
  <p><%= review.content %> </p>
  <p><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
- <p><%= link_to "Upvote", company_review_votes_path(:company_id => @company, :review_id => review, :vote_type => 'upvote'),
+ <p><%= link_to "Upvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
  method: 'post', remote: true%></p>
- <p><%= link_to "Downvote", company_review_votes_path(:company_id => @company, :review_id => review, :vote_type => 'downvote'),
+ <p><%= link_to "Downvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: 'downvote'),
  method: 'post', remote: true%></p>
 <% end %>
 
