@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Drop db on re-seed
+p "Destroying votes"
+Vote.destroy_all
 p "Dropping answers"
 Answer.destroy_all
 p "Dropping reviews"
@@ -20,7 +22,7 @@ Industry.destroy_all
 p "Deleting users"
 User.destroy_all
 p "Users dropped"
-
+p "Reticulating splines"
 
 5.times do
   p "creating industry"
