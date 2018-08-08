@@ -9,7 +9,9 @@
   align-items: center;
   justify-content: space-between;
 }
-
+*:focus {
+outline: none;
+}
 // LOGO
 .navbar-wb-brand {
  font-size: 5.5rem;
@@ -69,6 +71,7 @@
     background: transparent;
     width: 95%;
     padding: 5px;
+    margin-left: 25px;
 }
 
 #custom-search-input #button-search {
@@ -163,6 +166,7 @@
     font-size: 16px;
     width: 100%;
     margin-left: 5px;
+
 }
 
 #custom-search-input-dropdown #button-search {

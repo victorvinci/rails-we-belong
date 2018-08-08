@@ -17,14 +17,12 @@
   <div id="custom-search-input" class="hidden-xs">
     <div class="input-group col-md-12 col-sm-12 col-lg-12 hidden-xs">
       <%= form_tag searches_index_path, id: "form-control-text", method: :get do %>
-        <%= text_field_tag :query, params[:query], placeholder: "Type a keyword" %>
-
       <span class="input-group-btn">
         <button class="btn" type="submit">
           <i class="glyphicon glyphicon-search"></i>
         </button>
       </span>
-
+        <%= text_field_tag :query, params[:query] %>
        <% end %>
     </div>
   </div>
@@ -90,7 +88,7 @@
   <div id="custom-search-input-dropdown"">
     <div class="input-group col-md-12">
       <%= form_tag searches_index_path, id: "form-control-text-dropdown", method: :get do %>
-        <%= text_field_tag :query, params[:query], placeholder: "Type a keyword" %>
+        <%= text_field_tag :query, params[:query] %>
 
 
       <span class="input-group-btn">
