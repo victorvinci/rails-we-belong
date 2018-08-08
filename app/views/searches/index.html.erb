@@ -1,10 +1,12 @@
+  <!-- temporary style for body. please erase once body default css is set -->
+  <body style="padding-top: 100px;">
 
-<h3> Results for <strong><%= params[:query] %></strong></h3>
-<% if @results.empty? && @companies.empty? %>
-  <p>Sua pesquisa -
-    <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
-  <% elsif @results.empty? %>
-    <% @companies.each do |result| %>
+    <% if @results.empty? && @companies.empty? %>
+    <p>Sua pesquisa -
+      <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
+    <% elsif @results.empty? %>
+      <h3> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h3>
+      <% @companies.each do |result| %>
       <div>
         <p>
           <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
@@ -12,22 +14,36 @@
       </div>
       <% end %>
       <%= paginate @companies %>
-  <% else %>
-    <% @results.each do |result| %>
-      <div>
-        <h4>Empresa:</h4>
-        <p>
-          <%= link_to result.company.name, company_path(result.company_id) %>
-        </p>
-      </div>
-      <div>
-        <h4>Avaliações:</h4>
-        <p>
-          <%= result.pg_search_highlight.html_safe %>
-           | escrito em: <%= result.created_at.to_date.strftime("%d-%m-%Y") %>
-        </p>
-      </div>
+    <% else %>
+      <% if @companies.empty? %>
+        <h4> Nenhum resultado para <strong><%= params[:query] %></strong> em Empresas.</h4>
+      <% else %>
+          <h3> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h3>
+          <% @companies.each do |result| %>
+          <div>
+          <p>
+          <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
+          </p>
+          </div>
+          <% end %>
       <% end %>
-      <%= paginate @results %>
-  <% end %>
+      <h3> Resultados para <strong><%= params[:query] %></strong> em Avaliações:</h3>
+      <% @results.each do |result| %>
+      <div>
+        <span><h4>Empresa:</h4>
+          <p>
+            <%= link_to result.company.name, company_path(result.company_id) %>
+          </p></span>
+        </div>
+        <div>
+          <h4>O que as pessoas acham da <%= result.company.name %>:</h4>
+          <p>
+            <%= result.pg_search_highlight.html_safe %>
+            | escrito em: <%= result.created_at.to_date.strftime("%d-%m-%Y") %>
+          </p>
+        </div>
+        <% end %>
+        <%= paginate @results %>
+    <% end %>
 
+      </body>
