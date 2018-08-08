@@ -7,7 +7,20 @@ class Company < ApplicationRecord
   pg_search_scope :search,
       against: [ :name ],
       :using => {
-                  tsearch: { prefix: true, any_word: true },
+                  tsearch: {
+                    prefix: true,
+                    any_word: true,
+                    highlight: {
+                      StartSel: '<strong>',
+                      StopSel: '</strong>',
+                      MaxWords: 123,
+                      MinWords: 456,
+                      ShortWord: 4,
+                      HighlightAll: true,
+                      MaxFragments: 3,
+                      FragmentDelimiter: '&hellip;'
+                    }
+                  },
                   :trigram => {
                     :threshold => 0.1
                   }
