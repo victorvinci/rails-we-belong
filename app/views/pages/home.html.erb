@@ -1,14 +1,18 @@
 <div class="wrapper">
 
-  <div class="container" style="margin: 0; padding: 0; width: 100%;">
+  <div class="container home-banner" style="margin: 0; padding: 0; width: 100%;">
+
     <%= render "carousel" %>
+    <%= render "home-search" %>
   </div>
 
-  <div class="container">
-    <%= render "steps" %>
-  </div>
 
-  <div class="container">
+    <div class="container" style="height: 100vh;">
+      <%= render "steps" %>
+    </div>
+
+
+  <div class="container" id="values" style="height: 100vh";>
   <%= render "values" %>
   </div>
 
