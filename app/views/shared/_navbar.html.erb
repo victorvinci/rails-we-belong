@@ -14,7 +14,26 @@
 
  <!--  SEARCH BAR START -->
 
-  <div id="custom-search-input" class="hidden-xs hidden-sm hide">
+
+  <div id="custom-search-input" class="hidden-xs">
+    <div class="input-group col-md-12 col-sm-12 col-lg-12 hidden-xs">
+      <%= form_tag searches_index_path, id: "form-control-text", method: :get do %>
+      <span class="input-group-btn">
+        <button class="btn" type="submit">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </span>
+        <%= text_field_tag :query, params[:query] %>
+       <% end %>
+    </div>
+  </div>
+
+
+    <!--   <input type="text" class="form-control input-lg" placeholder="Procure empresas" /> -->
+
+
+  <!--  <div id="custom-search-input" class="hidden-xs hidden-sm">
+
     <div class="input-group col-md-12 hidden-xs hidden-sm">
       <input type="text" class="form-control input-lg" placeholder="Procure empresas ou temas de seu interesse">
       <span class="input-group-btn">
@@ -23,12 +42,12 @@
         </button>
       </span>
     </div>
-  </div>
+  </div> -->
 
 <!--   SEARCH BAR END -->
 
   <!-- Align right -->
-  <div class="navbar-wb-right hidden-xs hidden-sm">
+  <div class="navbar-wb-right hidden-xs">
     <!--       links navbar -->
     <a href="/#values" class="navbar-wb-item navbar-wb-link">Nossos Valores</a>
     <a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a>
@@ -37,7 +56,12 @@
  <!-- dropdown with avatar -->
     <div class="navbar-wb-item">
       <div class="dropdown">
+
+       <% if !user_signed_in? %>
          <i class="fas fa-address-card avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+       <% else %>
+          <i class="fas fa-address-card avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+       <% end %>
 
           <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
@@ -55,22 +79,30 @@
 <!-- fim dropdown with avatar -->
 
 <!--   navbar mobile -->
-  <div class="navbar-wb-item hidden-md hidden-lg">
+  <div class="navbar-wb-item hidden-sm hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
 
         <li>
-          <div id="custom-search-input-dropdown">
-            <div class="input-group col-md-12">
-              <input type="text" class="form-control input-lg" placeholder="Procure empresas" />
-              <span class="input-group-btn">
-                <button class="btn btn-info btn-lg" type="button">
-                  <i class="glyphicon glyphicon-search"></i>
-                </button>
-              </span>
-            </div>
-          </div>
+
+
+  <div id="custom-search-input-dropdown"">
+    <div class="input-group col-md-12">
+      <%= form_tag searches_index_path, id: "form-control-text-dropdown", method: :get do %>
+        <%= text_field_tag :query, params[:query] %>
+
+
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="submit">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </span>
+      <% end %>
+    </div>
+  </div>
+
+
         </li>
         <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a></li>
         <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a></li>
