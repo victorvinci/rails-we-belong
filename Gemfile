@@ -28,6 +28,8 @@ gem 'omniauth-linkedin-oauth2'
 # Gem for custom-search
 gem 'pg_search'
 
+# Gem for pagination
+gem 'kaminari'
 
 
 group :development do

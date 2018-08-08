@@ -1,9 +1,4 @@
 
-<!--  <%= form_tag searches_index_path, method: :get do%>
-    <%= text_field_tag :query,
-    params[:query], id: "searchbar", placeholder: "Type a keyword"%>
-    <%= submit_tag "Search" %>
-    <% end %> -->
 <h3> Results for <strong><%= params[:query] %></strong></h3>
 <% if @results.empty? && @companies.empty? %>
   <p>Sua pesquisa -
