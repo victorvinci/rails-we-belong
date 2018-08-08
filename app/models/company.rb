@@ -6,10 +6,11 @@ class Company < ApplicationRecord
 
   pg_search_scope :search,
       against: [ :name ],
-      associated_against: {
-        industry: [ :name ]
-      },
-      using: {
-        tsearch: { prefix: true, any_word: true }
-      }
+      :ranked_by => ":trigram",
+      :using => {
+                  tsearch: { prefix: true, any_word: true },
+                  :trigram => {
+                    :threshold => 0.1
+                  }
+                }
 end

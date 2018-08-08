@@ -12,8 +12,12 @@ class Review < ApplicationRecord
         company: [ :name ]
       },
       using: {
-        tsearch: { prefix: true, any_word: true }
+        tsearch: { prefix: true, any_word: true },
+        :trigram => {
+                    :threshold => 0.1
+                  }
       }
+
 
   private
 

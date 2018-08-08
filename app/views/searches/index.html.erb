@@ -1,4 +1,4 @@
-<h1>Searches</h1>
+
 <!--  <%= form_tag searches_index_path, method: :get do%>
     <%= text_field_tag :query,
     params[:query], id: "searchbar", placeholder: "Type a keyword"%>
@@ -6,28 +6,29 @@
     <% end %> -->
 <h3> Results for <strong><%= params[:query] %></strong></h3>
 <% if @results.empty? && @companies.empty? %>
-  <p>Your search -
-    <%= params[:query] %> - did not find any corresponding item. Please try another key word.</p>
+  <p>Sua pesquisa -
+    <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
   <% elsif @results.empty? %>
     <% @companies.each do |result| %>
       <div>
         <p>
-          <%= result.name %>
+          <%= link_to result.name, company_path(result) %>
         </p>
       </div>
       <% end %>
   <% else %>
     <% @results.each do |result| %>
       <div>
-        <h4>Company:</h4>
+        <h4>Empresa:</h4>
         <p>
           <%= link_to result.company.name, company_path(result.company_id) %>
         </p>
       </div>
       <div>
-        <h4>Reviews:</h4>
+        <h4>Avaliações:</h4>
         <p>
           <%= result.content %>
+           | escrito em: <%= result.created_at.to_date.strftime("%d-%m-%Y") %>
         </p>
       </div>
       <% end %>

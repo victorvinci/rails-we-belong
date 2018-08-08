@@ -5,7 +5,6 @@ class SearchesController < ApplicationController
     @results = Review.search(params[:query])
     if @results.empty?
       @companies = Company.search(params[:query])
-
     end
   end
 
