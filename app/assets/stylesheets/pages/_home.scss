@@ -21,3 +21,22 @@ li .values {
   }
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one 🙂       */
+  display: flex;
+  align-items: center;
+}
+
+#custom-search-home{
+  margin-top: -300px;
+  margin-bottom: 300px;
+  width: 1000px;
+  margin-left: 80px;
+}
+
+.input-group {
+  .form-control{
+    border-radius: 20px;
+  }
+}
