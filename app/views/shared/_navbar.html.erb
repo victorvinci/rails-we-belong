@@ -31,7 +31,7 @@
 <!--   SEARCH BAR END -->
 
   <!-- Align right -->
-  <div class="navbar-wb-right hidden-xs">
+  <div class="navbar-wb-right hidden-xs hidden-sm">
     <!--       links navbar -->
     <a href="/#values" class="navbar-wb-item navbar-wb-link">Nossos Valores</a>
     <a href="/#about" class="navbar-wb-item navbar-wb-link">We Belong</a>
@@ -40,6 +40,7 @@
  <!-- dropdown with avatar -->
     <div class="navbar-wb-item">
       <div class="dropdown">
+       <!--  <img src="https://avatars1.githubusercontent.com/u/38114468?v=4" class="avatar dropdown-toggle" id="navbar-wb-menu" data-toggle="dropdown"> -->
 
        <% if !user_signed_in? %>
          <i class="fas fa-address-card avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
@@ -63,30 +64,27 @@
 <!-- fim dropdown with avatar -->
 
 <!--   navbar mobile -->
-  <div class="navbar-wb-item hidden-sm hidden-md hidden-lg">
+  <div class="navbar-wb-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
 
         <li>
-
-
-  <div id="custom-search-input-dropdown"">
-    <div class="input-group col-md-12">
-      <%= form_tag searches_index_path, id: "form-control-text-dropdown", method: :get do %>
-        <%= text_field_tag :query, params[:query] %>
-
-
-      <span class="input-group-btn">
-        <button class="btn btn-info" type="submit">
-          <i class="glyphicon glyphicon-search"></i>
-        </button>
-      </span>
-      <% end %>
-    </div>
-  </div>
-
-
+          <div id="custom-search-input-dropdown">
+            <div class="input-group col-md-12">
+              <%= form_tag searches_index_path, method: :get do %>
+              <%= text_field_tag :query,
+              params[:query], id: "custom-search-input",
+              placeholder: "Search" %>
+              <%= submit_tag "Search", class: "btn btn-info" %>
+              <% end %>
+              <span class="input-group-btn">
+                <button class="btn btn-info" type="button">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </span>
+            </div>
+          </div>
         </li>
         <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a></li>
         <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a></li>
