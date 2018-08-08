@@ -14,13 +14,13 @@
 
  <!--  SEARCH BAR START -->
 
-  <div id="custom-search-input" class="hidden-xs hidden-sm">
-    <div class="input-group col-md-12 hidden-xs hidden-sm">
+  <div id="custom-search-input" class="hidden-xs">
+    <div class="input-group col-md-12 col-sm-12 col-lg-12 hidden-xs">
       <%= form_tag searches_index_path, id: "form-control-text", method: :get do %>
         <%= text_field_tag :query, params[:query], placeholder: "Type a keyword" %>
 
       <span class="input-group-btn">
-        <button class="btn btn-info btn-lg" type="submit">
+        <button class="btn" type="submit">
           <i class="glyphicon glyphicon-search"></i>
         </button>
       </span>
@@ -47,7 +47,7 @@
 <!--   SEARCH BAR END -->
 
   <!-- Align right -->
-  <div class="navbar-wb-right hidden-xs hidden-sm">
+  <div class="navbar-wb-right hidden-xs">
     <!--       links navbar -->
     <a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a>
     <a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a>
@@ -79,7 +79,7 @@
 <!-- fim dropdown with avatar -->
 
 <!--   navbar mobile -->
-  <div class="navbar-wb-item hidden-md hidden-lg">
+  <div class="navbar-wb-item hidden-sm hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
@@ -89,15 +89,16 @@
 
   <div id="custom-search-input-dropdown"">
     <div class="input-group col-md-12">
-      <%= form_tag searches_index_path, id: "form-control input-lg", method: :get do %>
+      <%= form_tag searches_index_path, id: "form-control-text-dropdown", method: :get do %>
         <%= text_field_tag :query, params[:query], placeholder: "Type a keyword" %>
-      <% end %>
+
 
       <span class="input-group-btn">
         <button class="btn btn-info" type="submit">
-          <i class="glyphicon glyphicon-search"></i><%= submit_tag "", name: nil, id: "button-search" %>
+          <i class="glyphicon glyphicon-search"></i>
         </button>
       </span>
+      <% end %>
     </div>
   </div>
 

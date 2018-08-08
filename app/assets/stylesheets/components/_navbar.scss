@@ -60,14 +60,15 @@
     background-color: #fff;
     width: 50%;
     position: relative;
+    padding: 3px;
 }
 
 #custom-search-input #query {
     border: 0;
     box-shadow: none;
     background: transparent;
-    width: 100%;
-    padding: 6px;
+    width: 95%;
+    padding: 5px;
 }
 
 #custom-search-input #button-search {
@@ -81,24 +82,27 @@
     box-shadow: none;
     border: 0;
     color: #666666;
-    border-left: solid 1px #ccc;
     display: flex;
-    font-size: medium;
 }
 
 #custom-search-input button:hover{
     border: 0;
     box-shadow: none;
-    border-left: solid 1px #ccc;
+    font-size: x-large;
 }
 
 #custom-search-input .glyphicon-search{
-    font-size: 20px;
+    padding: 4px;
 }
 
 #form-control-text {
   display: flex;
-  margin-right: 45px;
+  width: 100%;
+  align-items: center;
+}
+
+.input-group-btn .btn {
+  padding: 0;
 }
 
 // END SEARCH NAVBAR
@@ -148,7 +152,7 @@
     background-color: #fff;
     width: 100%;
     position: relative;
-    padding: 6px;
+    padding: 3px;
 
 }
 
@@ -158,6 +162,7 @@
     background: transparent;
     font-size: 16px;
     width: 100%;
+    margin-left: 5px;
 }
 
 #custom-search-input-dropdown #button-search {
@@ -171,9 +176,7 @@
     box-shadow: none;
     border: 0;
     color: #666666;
-    padding: 0 0 0 10px;
     border-left: solid 1px #ccc;
-    display: flex;
 }
 
 #custom-search-input-dropdown button:hover{
@@ -183,8 +186,12 @@
 }
 
 #custom-search-input-dropdown .glyphicon-search{
-    font-size: 20px;
+    margin: 1px;
     padding: 3px;
+}
+
+#form-control-text-dropdown {
+  display: flex;
 }
 
 // END SEARCH DROPDOWN
