@@ -1,42 +1,25 @@
 <h1>Companies#Show</h1>
-<h2><%= @company.name %></h2>
-<%= link_to "Review #{@company.name}", new_company_review_path(@company)  %>
-
-<dl>
-  <dt>Avaliações</dt>
-  <dd class="percentage percentage-<%= @company.answer_1_average_score %>">
-    <span class="text">
-      Funcionarios Diversos
-    </span>
-  </dd>
-  <dd class="percentage percentage-<%= @company.answer_2_average_score %>">
-    <span class="text">
-      Lideres Diversos
-    </span>
-  </dd>
-  <dd class="percentage percentage-<%= @company.answer_3_average_score %>">
-    <span class="text">
-      Ambiente Seguro
-    </span>
-  </dd>
-    <dd class="percentage percentage-<%= @company.answer_4_average_score %>">
-    <span class="text">
-      Acolhimento
-    </span>
-  </dd>
-    <dd class="percentage percentage-<%= @company.answer_5_average_score %>">
-    <span class="text">
-      Aceso a oportunidades
-    </span>
-  </dd>
-</dl>
-<h3>Reviews</h3>
-<% @company.reviews.each do |review| %>
- <p><%= review.content %> </p>
- <p><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
- <p><%= link_to "Upvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
- method: 'post', remote: true%></p>
- <p><%= link_to "Downvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: 'downvote'),
- method: 'post', remote: true%></p>
-<% end %>
-
+<div class="container">
+  <h1><%= @company.name %></h2>
+    <%= link_to "Review #{@company.name}", new_company_review_path(@company)  %>
+    <div class="company-profile">
+      <div class="company-blurb">
+        <h3>About <%= @company.name %></h2>
+        <p><%= @company.description %></p>
+      </div>
+        <%= render 'graph' %>
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <% @company.reviews.each do |review| %>
+        <div class="review">
+          <p><%= review.content %> </p>
+          <p><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
+          <p><%= link_to "Upvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: '  upvote'),
+          method: 'post', remote: true%></p>
+          <p><%= link_to "Downvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: '  downvote'),
+          method: 'post', remote: true%></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+</div>

@@ -41,22 +41,21 @@ class ReviewsController < ApplicationController
   end
 
   def update_associated_company_score
-    binding.pry
-    @review.company.answer_1_total_score += @review.answer.answer_1
-    @review.company.answer_2_total_score += @review.answer.answer_2
-    @review.company.answer_3_total_score += @review.answer.answer_3
-    @review.company.answer_4_total_score += @review.answer.answer_4
-    @review.company.answer_5_total_score += @review.answer.answer_5
+    @review.company.answer_1_total_score += @review.answer.answer_1 * 20
+    @review.company.answer_2_total_score += @review.answer.answer_2 * 20
+    @review.company.answer_3_total_score += @review.answer.answer_3 * 20
+    @review.company.answer_4_total_score += @review.answer.answer_4 * 20
+    @review.company.answer_5_total_score += @review.answer.answer_5 * 20
     @review.company.save
     calculate_averages
   end
 
   def calculate_averages
-    @review.company.answer_1_average_score += @review.company.answer_1_total_score / @review.company.reviews.length
-    @review.company.answer_2_average_score += @review.company.answer_2_total_score / @review.company.reviews.length
-    @review.company.answer_3_average_score += @review.company.answer_3_total_score / @review.company.reviews.length
-    @review.company.answer_4_average_score += @review.company.answer_4_total_score / @review.company.reviews.length
-    @review.company.answer_5_average_score += @review.company.answer_5_total_score / @review.company.reviews.length
+    @review.company.answer_1_average_score = @review.company.answer_1_total_score / @review.company.reviews.length
+    @review.company.answer_2_average_score = @review.company.answer_2_total_score / @review.company.reviews.length
+    @review.company.answer_3_average_score = @review.company.answer_3_total_score / @review.company.reviews.length
+    @review.company.answer_4_average_score = @review.company.answer_4_total_score / @review.company.reviews.length
+    @review.company.answer_5_average_score = @review.company.answer_5_total_score / @review.company.reviews.length
     @review.company.save
   end
 
