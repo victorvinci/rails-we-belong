@@ -27,13 +27,15 @@
     text-transform: uppercase;
     grid-column: 2 / 2;
     grid-row: 2 / 3;
-    font-size: calc(2.2rem + 3vw);
+    font-size: calc(1.2rem + 3vw);
     margin-left: 1rem;
     margin-right: 1rem;
-    background: goldenrod;
+    background: khaki;
     width: 57%;
     z-index: 1;
     box-shadow: 4px 3px black;
+    height: 60%;
+    padding: 1%;
   }
 
   h2 {
@@ -55,7 +57,7 @@
     z-index: -1;
     grid-column: 1 / -1;
     grid-row: 1 / 4;
-    object-fit: fill;
+    object-fit: cover;
   }
   .hide-button {
     grid-column: 2 / 2;
@@ -67,6 +69,7 @@
     margin: 0;
     background: lightblue;
     padding: 2%;
+    font-size: 1.5rem;
   }
 }
 
@@ -81,7 +84,7 @@
 .hide-button:hover>a {
 
   display: block;
-  font-size: 7vh;
+  font-size: 5rem;
   color: white;
 }
 

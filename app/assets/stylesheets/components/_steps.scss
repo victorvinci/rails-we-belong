@@ -5,20 +5,24 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
     text-align: center;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    height: 85vh;
+
 
   div { /* autoprefixer: off */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* margin: 1em 5% 1em; */
-    padding: 6rem;
-
+    padding: 2rem;
+        align-self: center;
     h2 {
-      margin: 1em 0 0.25em;
-      font-size: 2.5rem;
-      background-color: burlywood;
+margin: 1em 0 0.25em;
+    font-size: 2.5rem;
+    background-color: khaki;
+    color: mediumpurple;
+    padding: 1%;
     }
 
     .icon_home {
@@ -32,10 +36,11 @@
     }
 
     p {
-      font-size: 1.3rem;
-      margin-bottom: 0;
-      background-color: lightcoral;
-          width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    background-color: lightcoral;
+    width: 100%;
+    color: khaki;
     }
   }
 }
