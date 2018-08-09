@@ -24,14 +24,14 @@ User.destroy_all
 p "Users dropped"
 p "Reticulating splines"
 
-5.times do
+80.times do
   p "creating industry"
   industry = Industry.new(
   name: Faker::Company.industry
   )
   industry.save!
 end
-5.times do
+80.times do
   p "creating company"
   company = Company.new(
     name: Faker::Company.name,
