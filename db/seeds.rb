@@ -35,7 +35,7 @@ end
   p "creating company"
   company = Company.new(
     name: Faker::Company.name,
-    description: Faker::Company.catch_phrase,
+    description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph}",
     industry: Industry.all.sample
   )
   company.save!
