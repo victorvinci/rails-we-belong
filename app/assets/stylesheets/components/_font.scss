@@ -1,5 +1,9 @@
 * {box-sizing:border-box;}
 
+body {
+  background: white;
+}
+
 .hero { /* autoprefixer: off */
   display: grid;
   @media (max-width: 880px) {
