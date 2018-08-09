@@ -6,15 +6,6 @@
   background-color: linear-gradient(-225deg, rgba(0,20,0,0.6) 0%, rgba(20,0,0,0.6) 50%); // NAO FUNCIONA
 }
 
-li .values {
-  text-decoration: none;
-  color: inherit;
-  font-size: 24px;
-  &:hover{
-    color: red;
-  }
-}
-
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one 🙂       */
@@ -26,17 +17,5 @@ li .values {
 .input-group {
   .form-control{
     border-radius: 20px;
-  }
-}
-
-
-.values {
-  text-align: center;
-  padding: 32px;
-  height: 150vh;
-  width: 55vw;
-  h4{
-    line-height: 32px;
-    padding: 8px;
   }
 }
