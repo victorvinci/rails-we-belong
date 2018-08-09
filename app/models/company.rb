@@ -3,6 +3,7 @@ class Company < ApplicationRecord
 
   has_many :reviews
   belongs_to :industry
+  after_create :set_default_scores
 
   pg_search_scope :search,
       against: [ :name ],
@@ -26,4 +27,20 @@ class Company < ApplicationRecord
                   }
                 }
   paginates_per 5
+
+  private
+
+  def set_default_scores
+    self.answer_1_total_score = 0
+    self.answer_2_total_score = 0
+    self.answer_3_total_score = 0
+    self.answer_4_total_score = 0
+    self.answer_5_total_score = 0
+    self.answer_1_average_score = 0
+    self.answer_2_average_score = 0
+    self.answer_3_average_score = 0
+    self.answer_4_average_score = 0
+    self.answer_5_average_score = 0
+    self.save!
+  end
 end
