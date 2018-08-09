@@ -6,7 +6,7 @@
     grid-gap: 2rem;
     text-align: center;
     width: 85%;
-    margin: 0 auto;
+    margin: 5% auto;
 
   div { /* autoprefixer: off */
     display: flex;
@@ -16,9 +16,11 @@
     padding: 6rem;
 
     h2 {
-      margin: 1em 0 0.25em;
-      font-size: 2.5rem;
-      background-color: burlywood;
+margin: 1em 0 0.25em;
+    font-size: 2.5rem;
+    background-color: khaki;
+    color: mediumpurple;
+    padding: 1%;
     }
 
     .icon_home {
@@ -32,10 +34,11 @@
     }
 
     p {
-      font-size: 1.3rem;
-      margin-bottom: 0;
-      background-color: lightcoral;
-          width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    background-color: lightcoral;
+    width: 100%;
+    color: khaki;
     }
   }
 }

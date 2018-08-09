@@ -30,7 +30,7 @@
     font-size: calc(2.2rem + 3vw);
     margin-left: 1rem;
     margin-right: 1rem;
-    background: goldenrod;
+    background: khaki;
     width: 57%;
     z-index: 1;
     box-shadow: 4px 3px black;
@@ -55,7 +55,7 @@
     z-index: -1;
     grid-column: 1 / -1;
     grid-row: 1 / 4;
-    object-fit: fill;
+    object-fit: fit;
   }
   .hide-button {
     grid-column: 2 / 2;
