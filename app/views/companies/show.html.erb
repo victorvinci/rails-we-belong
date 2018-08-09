@@ -1,6 +1,35 @@
 <h1>Companies#Show</h1>
 <h2><%= @company.name %></h2>
 <%= link_to "Review #{@company.name}", new_company_review_path(@company)  %>
+
+<dl>
+  <dt>Avaliações</dt>
+  <dd class="percentage percentage-<%= @company.answer_1_average_score %>">
+    <span class="text">
+      Funcionarios Diversos
+    </span>
+  </dd>
+  <dd class="percentage percentage-<%= @company.answer_2_average_score %>">
+    <span class="text">
+      Lideres Diversos
+    </span>
+  </dd>
+  <dd class="percentage percentage-<%= @company.answer_3_average_score %>">
+    <span class="text">
+      Ambiente Seguro
+    </span>
+  </dd>
+    <dd class="percentage percentage-<%= @company.answer_4_average_score %>">
+    <span class="text">
+      Acolhimento
+    </span>
+  </dd>
+    <dd class="percentage percentage-<%= @company.answer_5_average_score %>">
+    <span class="text">
+      Aceso a oportunidades
+    </span>
+  </dd>
+</dl>
 <h3>Reviews</h3>
 <% @company.reviews.each do |review| %>
  <p><%= review.content %> </p>

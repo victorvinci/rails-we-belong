@@ -1,22 +1,19 @@
-<div class="wrapper">
+<main role="main">
 
-  <div class="container home-banner" style="margin: 0; padding: 0; width: 100%;">
-    <%= render "carousel" %>
-    <%= render "home-search" %>
-  </div>
+  <section class="hero home-banner">
+    <%= render "hero" %>
+  </section>
 
-
-  <div class="container" style="height: 100vh;">
+  <section class="steps">
     <%= render "steps" %>
-  </div>
+  </section>
 
-  <div class="container" id="about">
-     <%= render "about"%>
-  </div>
+  <section class="articles">
+    <%= render "about"%>
+  </section>
 
-
-  <div class="container" id="values">
+  <section class="values">
     <%= render "values" %>
-  </div>
+  </section>
 
-</div>
+</main>

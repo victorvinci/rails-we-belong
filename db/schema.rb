@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_141251) do
+
+ActiveRecord::Schema.define(version: 2018_08_09_155220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.integer "importance_1"
-    t.integer "weighting_1"
+
     t.integer "answer_1"
     t.integer "importance_2"
     t.integer "weighting_2"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 2018_08_08_141251) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "industry_id"
+    t.integer "answer_1_total_score"
+    t.integer "answer_1_average_score"
+    t.integer "answer_2_total_score"
+    t.integer "answer_2_average_score"
+    t.integer "answer_3_total_score"
+    t.integer "answer_3_average_score"
+    t.integer "answer_4_total_score"
+    t.integer "answer_4_average_score"
+    t.integer "answer_5_total_score"
+    t.integer "answer_5_average_score"
     t.index ["industry_id"], name: "index_companies_on_industry_id"
   end
 
@@ -57,6 +67,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_141251) do
     t.string "age_group"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "disability"
     t.index ["user_id"], name: "index_employee_profiles_on_user_id"
   end
 
