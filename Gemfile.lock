@@ -87,6 +87,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    json (2.1.0)
     jwt (1.5.6)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
@@ -147,6 +148,12 @@ GEM
       activerecord (>= 4.2)
       activesupport (>= 4.2)
       arel (>= 6)
+    postmark (1.13.0)
+      json
+      rake
+    postmark-rails (0.17.0)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.13.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -267,6 +274,7 @@ DEPENDENCIES
   omniauth-linkedin-oauth2
   pg (~> 0.21)
   pg_search
+  postmark-rails
   pry-byebug
   pry-rails
   puma
