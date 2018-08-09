@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap-popover-rails'
+gem "letter_opener", group: :development
 
 # Gems for authentication & authorisation
 gem 'devise'
@@ -34,6 +35,7 @@ gem 'kaminari'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+
 end
 
 group :development, :test do
