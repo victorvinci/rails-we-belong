@@ -9,17 +9,36 @@ class Review < ApplicationRecord
 
   pg_search_scope :search,
       against: [ :content ],
-      associated_against: {
-        company: [ :name ]
-      },
+      # associated_against: {
+      #   company: [ :name ]
+      # },
+      # :ranked_by => ":tsearch",
       using: {
-        tsearch: { prefix: true, any_word: true }
+        tsearch: {
+          prefix: true,
+          any_word: true,
+          highlight: {
+            StartSel: '<strong>',
+            StopSel: '</strong>',
+            MaxWords: 123,
+            MinWords: 456,
+            ShortWord: 4,
+            HighlightAll: true,
+            MaxFragments: 3,
+            FragmentDelimiter: '&hellip;'
+          }
+        },
+        :trigram => {
+                    :threshold => 0.5
+                  }
       }
+  paginates_per 5
 
   private
 
-   def calculate_weighting
-    self.answer.minority? ? self.weighting = 130 : self.weighting = 100
+  def calculate_weighting
+    self.answer.minority? ? self.weighting = 130 : 100
     self.save!
   end
+
 end

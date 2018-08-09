@@ -44,7 +44,6 @@ class VotesController < ApplicationController
   end
 
   def remove_vote
-    binding.pry
     @vote = @review.votes.where(user_id: @user).first
     if @vote.vote_type == 'upvote'
       @review.weighting -= 5

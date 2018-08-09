@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap-popover-rails'
+gem "letter_opener", group: :development
 
 # Gems for authentication & authorisation
 gem 'devise'
@@ -28,10 +29,13 @@ gem 'omniauth-linkedin-oauth2'
 # Gem for custom-search
 gem 'pg_search'
 
+# Gem for pagination
+gem 'kaminari'
 
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+
 end
 
 group :development, :test do
