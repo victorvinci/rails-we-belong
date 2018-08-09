@@ -36,11 +36,11 @@ class Company < ApplicationRecord
     self.answer_3_total_score = 0
     self.answer_4_total_score = 0
     self.answer_5_total_score = 0
-    self.answer_1_average_score = 0
-    self.answer_2_average_score = 0
-    self.answer_3_average_score = 0
-    self.answer_4_average_score = 0
-    self.answer_5_average_score = 0
+    self.answer_1_average_score = 50
+    self.answer_2_average_score = 50
+    self.answer_3_average_score = 50
+    self.answer_4_average_score = 50
+    self.answer_5_average_score = 50
     self.save!
   end
 end

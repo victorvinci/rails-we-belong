@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 2018_08_09_155220) do
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.integer "importance_1"
-    t.integer "weighting_1"
+
     t.integer "answer_1"
     t.integer "importance_2"
     t.integer "weighting_2"
