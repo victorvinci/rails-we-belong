@@ -1,70 +1,5 @@
 * {box-sizing:border-box;}
 
-html {
-  font-family: helvetica, san-serif;
-  line-height: 1.3em;
-  text-rendering: optimizeLegibility;
-  font-kerning: normal;
-  text-size-adjust: 100%;
-}
-body {
-//  width: 90%;
-  margin: 5vw auto;
-  text-align: center;
-}
-h1 {
-  line-height: 1.2;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
-ul, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-header { /* autoprefixer: off */
-  width: 90%;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  text-transform: uppercase;
-  h1 {
-    margin: 0 0 0.5em;
-    font-size: 1.8rem;
-  }
-  @media (min-width: 500px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    h1 {
-      margin: 0 1em 0 0;
-    }
-  }
-  nav ul {
-    display: flex;
-    margin-bottom: 4px;
-    justify-content: space-between;
-  }
-  @media (min-width: 300px) {
-    nav li {
-      flex: auto;
-      margin-right: 1em;
-      padding-right: 1em;
-      border-right: 1px solid #000;
-    }
-  }
-  @media (min-width: 580px) {
-    nav ul {
-      flex-wrap: wrap;
-    }
-  }
-  nav li:last-child {
-    border: none;
-    margin-right: 0;
-    padding-right: 0;
-  }
-}
 .hero { /* autoprefixer: off */
   display: grid;
   @media (max-width: 880px) {
@@ -73,9 +8,9 @@ header { /* autoprefixer: off */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 2em;
-  margin: 2rem 0;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   h1 {
     text-transform: uppercase;
@@ -114,13 +49,13 @@ header { /* autoprefixer: off */
     align-self: center;
     width: 66%;
     justify-self: center;
-    font-size: calc(0.75rem + 1vw);
+    font-size: calc(2.75rem + 1vw);
     line-height: 1.5;
     margin: 0;
   }
 }
 .talking-points { /* autoprefixer: off */
-  background: #191919;
+  background: #9673A0;
   color: #efefef;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -135,14 +70,18 @@ header { /* autoprefixer: off */
     padding: 0 1rem;
     h2 {
       margin: 1em 0 0.25em;
-      font-size: 1.8rem;
+      font-size: 2.5rem;
     }
-    img {
+    .icon_home {
       order: -1;
-      max-width: 100px;
+      max-width: 100%;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 0 25px 0 rgba(226, 216, 44, 0.5);
     }
     p {
-      font-size: 0.9rem;
+      font-size: 1.3rem;
       margin-bottom: 0;
     }
   }
