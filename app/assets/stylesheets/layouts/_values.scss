@@ -1,0 +1,45 @@
+.values {
+  text-align: left;
+  margin: 10% auto;
+  color: black;
+}
+
+.values h2 {
+  padding: 5px 5px 1% 5px;
+  width: fit-content;
+}
+
+.values ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: lightgrey;
+    padding: 0 0 25px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.values li {
+    background-color: khaki;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.values li:hover {
+    background-color: khaki;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.values a:hover {
+  cursor: help;
+  color: black;
+  text-decoration: none;
+}
+
+.background-yellow {
+  background-color: black;
+  padding: 1%;
+  margin: 3% 25%;
+}

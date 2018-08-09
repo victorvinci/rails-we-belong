@@ -73,22 +73,18 @@
   }
 }
 
-.hide-button > p {
+.hide-button>a {
   display: none;
 }
 
-.hide-button>a {
-  display: block;
-    font-size: 5rem;
-  color: white;
-}
-
 .hide-button:hover>p {
-  display: block;
+  display: none;
 }
 
 .hide-button:hover>a {
 
-  display: none;
+  display: block;
+  font-size: 5rem;
+  color: white;
 }
 

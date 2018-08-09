@@ -1,0 +1,46 @@
+.steps { /* autoprefixer: off */
+    background: #9673A0;
+    color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 85vh;
+
+
+  div { /* autoprefixer: off */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 1em 5% 1em; */
+    padding: 2rem;
+        align-self: center;
+    h2 {
+margin: 1em 0 0.25em;
+    font-size: 2.5rem;
+    background-color: khaki;
+    color: mediumpurple;
+    padding: 1%;
+    }
+
+    .icon_home {
+      order: -1;
+      max-width: 100%;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      // box-shadow: 0 0 25px 0 rgba(226, 216, 44, 0.5);
+      object-fit: cover;
+    }
+
+    p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    background-color: lightcoral;
+    width: 100%;
+    color: khaki;
+    }
+  }
+}
