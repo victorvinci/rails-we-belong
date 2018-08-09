@@ -76,6 +76,7 @@ header { /* autoprefixer: off */
   margin: 2rem 0;
   justify-content: center;
   align-items: center;
+
   h1 {
     text-transform: uppercase;
     grid-column: 1 / -1;
@@ -84,10 +85,10 @@ header { /* autoprefixer: off */
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
   h2 {
     text-transform: uppercase;
-    border: 1px solid black;
-    background: rgba(255,255,255,0.6);
+    background: transparent;
     padding: 1rem 0.5rem 0.6rem;
     font-size: 1.2rem;
     margin: 0;
@@ -98,7 +99,7 @@ header { /* autoprefixer: off */
       grid-column: 2 / 4;
     }
   }
-  img {
+  #carousel-example-generic {
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -124,6 +125,7 @@ header { /* autoprefixer: off */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2rem;
+
   div { /* autoprefixer: off */
     display: flex;
     flex-direction: column;
@@ -145,6 +147,7 @@ header { /* autoprefixer: off */
     }
   }
 }
+
 footer {
   width: 90%;
   margin-top: 1rem;

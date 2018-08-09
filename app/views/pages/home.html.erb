@@ -1,14 +1,13 @@
-<div class="wrapper">
+<main role="main">
 
-  <div class="container home-banner" style="margin: 0; padding: 0; width: 100%;">
+<section class="hero">
     <%= render "carousel" %>
-    <%= render "home-search" %>
-  </div>
+</section>
 
 
-  <div class="container" style="height: 100vh;">
+  <section class="talking-points">
     <%= render "steps" %>
-  </div>
+  </section>
 
   <div class="container" id="about">
      <%= render "about"%>
@@ -19,4 +18,4 @@
     <%= render "values" %>
   </div>
 
-</div>
+</main>
