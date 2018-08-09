@@ -1,4 +1,11 @@
 Rails.application.configure do
+
+  # ...
+  config.action_mailer.delivery_method     = :postmark
+  config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
+  config.action_mailer.default_url_options = { host: "we-belong.herokuapp.com" }
+  # or your custom domain name eg. "www.yourdomain.com"
+
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
   # Settings specified here will take precedence over those in config/application.rb.
