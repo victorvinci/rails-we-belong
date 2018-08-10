@@ -9,6 +9,9 @@
         <%= render 'graph' %>
       <div class="reviews">
         <h4 class="central-title"><mark>Reviews</mark></h3>
+        <%= link_to new_company_review_path(@company) do %>
+          <i class="far fa-edit" style="padding-top: 15px;"></i> Faz sua propia avaliaçao
+        <% end %>
         <% @reviews.each do |review| %>
         <div class="review">
           <p><%= review.content %> </p>
