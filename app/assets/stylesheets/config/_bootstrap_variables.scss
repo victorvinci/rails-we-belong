@@ -9,13 +9,13 @@ $headings-font-family:    $headers-font;
 $body-bg:                 $webelonggray;
 $font-size-base: 18px;
 
-// Colors
-$gray-base:       $webelonggray;
-$brand-primary:   $webelongblue;
-$brand-success:   $webelonggreen;
-$brand-info:      $webelongorange;
-$brand-danger:    $webelongred;
-$brand-warning:   $webelongpurple;
+// Colors (in background config use the bootstrap variable)
+$basegray:       $webelonggray;
+$calmingblue:   $webelongblue;
+$relaxinggreen:   $webelonggreen;
+$friendlyorange:      $webelongorange;
+$warmred:    $webelongred;
+$professionalpurple:   $webelongpurple;
 
 // Buttons & inputs' radius
 $border-radius-base:  2px;
@@ -29,14 +29,14 @@ $border-radius-small: 2px;
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: $webelongred;
+  color: $warmred;
 }
 
 .was-validated .form-control:invalid,
 .form-control.is-invalid,
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
-  border-color: $webelongred;
+  border-color: $warmred;
 }
 
 .was-validated .form-control:invalid ~ .invalid-feedback,
