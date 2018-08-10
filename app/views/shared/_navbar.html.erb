@@ -21,7 +21,7 @@
           <i class="glyphicon glyphicon-search"></i>
         </button>
       </span>
-        <%= text_field_tag :query, params[:query] %>
+        <%= text_field_tag :query, params[:query], placeholder: "Procure aqui por empresa ou tema de seu interesse", style: "font-size: 12px;" %>
        <% end %>
     </div>
   </div>
@@ -64,7 +64,7 @@
 <!--   navbar mobile -->
   <div class="navbar-wb-item hidden-md hidden-lg">
     <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown" style="color: lightcoral;"></i>
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown" style="color: $webelongpurple;"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
 
         <li>

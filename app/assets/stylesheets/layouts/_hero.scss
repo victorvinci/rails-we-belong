@@ -30,7 +30,7 @@
     font-size: calc(1.2rem + 3vw);
     margin-left: 1rem;
     margin-right: 1rem;
-    background: khaki;
+    background: $webelongorange;
     width: 57%;
     z-index: 1;
     box-shadow: 4px 3px black;
@@ -67,7 +67,7 @@
     justify-self: center;
     line-height: 1.5;
     margin: 0;
-    background: lightblue;
+    background: $webelongblue;
     padding: 2%;
     font-size: 1.5rem;
   }

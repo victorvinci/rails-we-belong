@@ -13,20 +13,20 @@
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    background-color: lightgrey;
+    background-color: $webelonggray;
     padding: 0 0 25px;
     width: 80%;
     margin: 0 auto;
 }
 
 .values li {
-    background-color: khaki;
+    background-color: $webelongorange;
     text-transform: uppercase;
     padding: 10px;
 }
 
 .values li:hover {
-    background-color: khaki;
+    background-color: $webelongorange;
     text-transform: uppercase;
     padding: 20px;
     margin-top: 20px;

@@ -30,7 +30,7 @@
     font-size: calc(1.2rem + 3vw);
     margin-left: 1rem;
     margin-right: 1rem;
-    background: khaki;
+    background: $webelongorange;
     width: 57%;
     z-index: 1;
     box-shadow: 4px 3px black;
@@ -75,7 +75,7 @@
 
 
 .fa-arrow-alt-circle-down {
-  color: lightcoral !important;
+  color: $webelongpurple !important;
 }
 
 .hide-button>p {
@@ -93,9 +93,9 @@
   text-shadow: 2px 2px black;
   a {
   text-decoration: none;
-  color: lightcoral;
+  color: $webelongpurple;
   // font-weight: bolder;
-  // text-shadow: 1px 1px 2px lightcoral;
+  // text-shadow: 1px 1px 2px $webelongpurple;
 
   }
 }
