@@ -19,15 +19,14 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: lightcoral;
+  opacity: 0.75;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
-  color: #FD8CD4;
 }
 .footer .fa-heart {
   color: #FD8CD4;
@@ -35,8 +34,9 @@
 
 .footer-copyright p {
   margin: 0;
-  color: #C7C7C7;
+  color: lightcoral;
   font-size: 62%;
+    opacity: 0.75;
 }
 
 .footer-copyright {
