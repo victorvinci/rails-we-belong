@@ -67,10 +67,15 @@
     justify-self: center;
     line-height: 1.5;
     margin: 0;
-    background: lightblue;
+    background: transparent;
     padding: 2%;
     font-size: 1.5rem;
   }
+}
+
+
+.fa-arrow-alt-circle-down {
+  color: lightcoral !important;
 }
 
 .hide-button>p {
@@ -85,10 +90,13 @@
 
 .hide-button:hover>p {
   display: block;
+  text-shadow: 2px 2px black;
   a {
-    text-decoration: none;
-    color: black; // font-weight: bolder;
-    // text-shadow: 1px 1px 2px lightcoral;
+  text-decoration: none;
+  color: lightcoral;
+  // font-weight: bolder;
+  // text-shadow: 1px 1px 2px lightcoral;
+
   }
 }
 
