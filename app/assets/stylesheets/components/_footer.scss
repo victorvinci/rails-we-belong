@@ -2,7 +2,6 @@
 
 .footer {
   box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 1), 0px 20px 0px 0px rgba(0, 0, 0, 1);
-  position: fixed;
   width: 100%;
   background: white;
   display: flex;
@@ -11,14 +10,14 @@
   height: 60px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  bottom: 0;
+
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: $webelongpurple;
+  color: $professionalpurple;
   opacity: 0.75;
   text-decoration: none;
   font-size: 24px;
@@ -33,7 +32,7 @@
 
 .footer-copyright p {
   margin: 0;
-  color: $webelongpurple;
+  color: $professionalpurple;
   font-size: 62%;
     opacity: 0.75;
 }

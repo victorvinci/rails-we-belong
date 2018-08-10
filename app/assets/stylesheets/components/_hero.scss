@@ -30,7 +30,7 @@
     font-size: calc(1.2rem + 3vw);
     margin-left: 1rem;
     margin-right: 1rem;
-    background: $webelongorange;
+    background: $friendlyorange;
     width: 57%;
     z-index: 1;
     box-shadow: 4px 3px black;
@@ -75,7 +75,7 @@
 
 
 .fa-arrow-alt-circle-down {
-  color: $webelongpurple !important;
+  color: $professionalpurple !important;
 }
 
 .hide-button>p {
@@ -95,10 +95,10 @@
   text-align: center;
   a {
   text-decoration: none;
-  color: $webelongpurple;
-    font-weight: bolder;
+  color: $professionalpurple;
+
   // font-weight: bolder;
-  // text-shadow: 1px 1px 2px $webelongpurple;
+  // text-shadow: 1px 1px 2px $professionalpurple;
 
   }
 }
