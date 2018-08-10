@@ -1,23 +1,26 @@
-<h1>Companies#Show</h1>
+<div style="height: 70px;"></div>
 <div class="container">
-  <h1><%= @company.name %></h2>
-    <%= link_to "Review #{@company.name}", new_company_review_path(@company)  %>
+  <h1 class="company"><%= @company.name %></h2>
     <div class="company-profile">
       <div class="company-blurb">
-        <h3>About <%= @company.name %></h2>
+        <h4 class="central-title"><mark>About <%= @company.name %></mark></h4>
         <p><%= @company.description %></p>
       </div>
         <%= render 'graph' %>
       <div class="reviews">
-        <h3>Reviews</h3>
+        <h4 class="central-title"><mark>Reviews</mark></h3>
         <% @company.reviews.each do |review| %>
         <div class="review">
           <p><%= review.content %> </p>
           <p><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
-          <p><%= link_to "Upvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: '  upvote'),
-          method: 'post', remote: true%></p>
-          <p><%= link_to "Downvote", company_review_votes_path(company_id: @company, review_id: review, vote_type: '  downvote'),
-          method: 'post', remote: true%></p>
+          <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: '  upvote'),
+          method: 'post', remote: true do%>
+            <i class="far fa-thumbs-up vote upvote"></i>
+            <% end %> |
+          <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: '  downvote'),
+          method: 'post', remote: true do%>
+          <i class="far fa-thumbs-down vote downvote"></i>
+          <% end  %>
         </div>
         <% end %>
       </div>
