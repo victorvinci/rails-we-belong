@@ -1,27 +1,36 @@
-<h1>New review for <%= @company.name %></h1>
-<%= current_user.email %>
-<%= simple_form_for [@company, @review] do |f| %>
-  <% if @review.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @review.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+<div style="height: 70px;"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="review-form">
+        <h1>New review for <%= @company.name %></h1>
+        <%= current_user.email %>
+        <%= simple_form_for [@company, @review] do |f| %>
+        <% if @review.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @review.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-   <%= f.input :user_area %>
-   <%= f.input :user_position %>
-   <%= f.input :content %>
-    <%= f.simple_fields_for :answer do |a| %>
+        <%= f.input :user_area %>
+        <%= f.input :user_position %>
+        <%= f.input :content %>
+        <%= f.simple_fields_for :answer do |a| %>
 
-    <% collection = [['N/A', '3'], ['Strongly Disagree', '1'], ['Disagree', '2'], ['Neutral', '3'], ['Agree', '4'], ['Strongly Agree', '5']] %>
-      <%= a.input :answer_1, as: :radio_buttons, collection: collection, label: "Question 1 goes here" %>
-      <%= a.input :answer_2, as: :radio_buttons, collection: collection, label: "Question 2 goes here" %>
-      <%= a.input :answer_3, as: :radio_buttons, collection: collection, label: "Question 3 goes here" %>
-      <%= a.input :answer_4, as: :radio_buttons, collection: collection, label: "Question 4 goes here" %>
-      <%= a.input :answer_5, as: :radio_buttons, collection: collection, label: "Question 5 goes here" %>
-      <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Are you part of a minority?" %>
-   <% end  %>
-   <%= f.button :submit %>
-<% end %>
+        <% collection = [['N/A', '3'], ['Strongly Disagree', '1'], ['Disagree', '2'], ['Neutral', '3'], ['Agree', '4'], ['Strongly Agree', '5']] %>
+        <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade a sua volta?", checked: collection[0] %>
+        <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que reflete a realidade a sua volta?", checked: collection[0] %>
+        <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", checked: collection[0] %>
+        <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", checked: collection[0] %>
+        <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", checked: collection[0] %>
+        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Are you part of a minority?", checked: collection[0] %>
+        <% end  %>
+        <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

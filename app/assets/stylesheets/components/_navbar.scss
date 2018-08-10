@@ -26,13 +26,14 @@ outline: none;
 
 // LOGO
 .navbar-wb-brand {
+
  font-size: 4.5rem;
- color: lightcoral;
+ color: $webelongpurple;
    opacity: 0.75;
 }
 
 .navbar-wb-brand:hover {
-  color: lightcoral;
+  color: $webelongpurple;
   text-decoration: none;
     opacity: 1;
 }
@@ -42,7 +43,8 @@ outline: none;
 /* User Avatar */
 .navbar-wb .avatar {
   font-size: 3rem;
-  color: lightcoral;
+  color: $webelongpurple;
+
     opacity: 0.75;
 }
 
@@ -61,12 +63,12 @@ outline: none;
 
 /* Navbar link */
 .navbar-wb-link {
-  color: lightcoral;
+  color: $webelongpurple;
   font-size: 14px;
   opacity: 0.35;
 }
 .navbar-wb-link:hover {
-  color: lightcoral;
+  color: $webelongpurple;
   text-decoration: none;
   opacity: 1;
 }
