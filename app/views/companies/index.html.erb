@@ -1,4 +1,15 @@
-<h1>Index#Companies</h1>
-<% @companies.each do |company|  %>
-<p><%= link_to company.name, company_path(company) %></p>
-<% end %>
+<div class="container" style="height: 100vh; margin: 10vh auto 30vh auto;">
+  <h1><mark>All Companies</mark></h1>
+    <ul >
+    <% @companies.each do |company|  %>
+    <div class="list-companies" style="display: none; list-style-type: none;">
+      <li style="border-bottom: 1px solid black; padding: 2%;">
+        <%= link_to company.name, company_path(company) %>
+        <p> Última Avaliação Feita: <%= company.updated_at %></p>
+        <p> <%= company.description %></p>
+      </li>
+    </div>
+    <% end %>
+      <a href="#" id="load" style="padding-top: 1%;">Load More</a>
+    </ul>
+</div>
