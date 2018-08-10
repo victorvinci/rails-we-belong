@@ -2,20 +2,19 @@ dl {
   display: flex;
   background-color: white;
   flex-direction: column;
-  max-width: 500px;
+  /* max-width: 100%; */
   position: relative;
-  padding: 20px;
+  width: 100%;
 }
 
 dt {
-  align-self: flex-start;
-  font-weight: 700;
-  display: block;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-bottom: 20px;
-  margin-left: 130px;
+align-self: flex-start;
+font-weight: 700;
+display: block;
+text-align: center;
+font-size: 1.2em;
+font-weight: 700;
+margin-bottom: 20px;
 }
 
 .text-graph {
@@ -31,7 +30,7 @@ dt {
 }
 
 .percentage {
-  font-size: .8em;
+  font-size: 1rem;
   line-height: 1;
   text-transform: uppercase;
   height: 40px;
