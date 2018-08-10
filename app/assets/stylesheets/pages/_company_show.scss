@@ -78,3 +78,9 @@
 .downvote {
     color: red;
   }
+
+@media (max-width: 940px) {
+  .company-profile {
+    display: block;
+  }
+}
