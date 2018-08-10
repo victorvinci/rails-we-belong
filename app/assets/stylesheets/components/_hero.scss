@@ -90,19 +90,17 @@
 
 .hide-button:hover>p {
   display: block;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px 3px black;
+  font-size: 2rem;
+  text-align: center;
   a {
   text-decoration: none;
   color: lightcoral;
-  // font-weight: bolder;
-  // text-shadow: 1px 1px 2px lightcoral;
+  font-weight: bolder;
 
   }
 }
 
-
-
 .hide-button:hover>a {
-
   display: none;
 }

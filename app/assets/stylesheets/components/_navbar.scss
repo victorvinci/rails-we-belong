@@ -4,7 +4,6 @@ outline: none;
 
 /* CONTAINER NAVBAR */
 .navbar-wb {
-
   background: transparent;
   transition: all 0.3s ease;
   height: 70px;
@@ -27,7 +26,7 @@ outline: none;
 
 // LOGO
 .navbar-wb-brand {
- font-size: 5.5rem;
+ font-size: 4.5rem;
  color: lightcoral;
    opacity: 0.75;
 }
@@ -42,7 +41,7 @@ outline: none;
 
 /* User Avatar */
 .navbar-wb .avatar {
-  font-size: 4rem;
+  font-size: 3rem;
   color: lightcoral;
     opacity: 0.75;
 }
@@ -72,63 +71,7 @@ outline: none;
   opacity: 1;
 }
 
-// START SEARCH NAVBAR
 
-
-#custom-search-input {
-    border: solid 1px #E4E4E4;
-    border-radius: 6px;
-    background-color: #fff;
-    position: relative;
-    padding: 3px;
-}
-
-#custom-search-input #query {
-    border: 0;
-    box-shadow: none;
-    background: transparent;
-    width: 95%;
-    padding: 5px;
-    margin-left: 25px;
-}
-
-#custom-search-input #button-search {
-
-    border: 0;
-    box-shadow: none;
-    background: transparent;
-}
-
-
-#custom-search-input button{
-    background: none;
-    box-shadow: none;
-    border: 0;
-    color: #666666;
-}
-
-.custom-search-input button:hover{
-    border: 0;
-    box-shadow: none;
-    font-size: x-large;
-}
-
-#custom-search-input .glyphicon-search{
-    padding: 4px;
-}
-
-#form-control-text {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-
-.input-group-btn .btn {
-  padding: 0;
-
-}
-
-// END SEARCH NAVBAR
 
 /* Dropdown menu */
 .navbar-wb-dropdown-menu {
@@ -167,55 +110,3 @@ outline: none;
 
 }
 
-// START SEARCH DROPDOWN
-
-#custom-search-input-dropdown{
-    border: solid 1px #E4E4E4;
-    border-radius: 6px;
-    background-color: #fff;
-    width: 100%;
-    position: relative;
-    padding: 3px;
-
-}
-
-#custom-search-input-dropdown #query {
-    border: 0;
-    box-shadow: none;
-    background: transparent;
-    font-size: 16px;
-    width: 100%;
-    margin-left: 5px;
-
-}
-
-#custom-search-input-dropdown #button-search {
-    border: 0;
-    box-shadow: none;
-    background: transparent;
-}
-
-#custom-search-input-dropdown button{
-    background: none;
-    box-shadow: none;
-    border: 0;
-    color: #666666;
-    border-left: solid 1px #ccc;
-}
-
-#custom-search-input-dropdown button:hover{
-    border: 0;
-    box-shadow: none;
-    border-left: solid 1px #ccc;
-}
-
-#custom-search-input-dropdown .glyphicon-search{
-    margin: 1px;
-    padding: 3px;
-}
-
-#form-control-text-dropdown {
-  display: flex;
-}
-
-// END SEARCH DROPDOWN
