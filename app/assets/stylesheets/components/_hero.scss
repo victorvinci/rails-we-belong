@@ -85,7 +85,14 @@
 
 .hide-button:hover>p {
   display: block;
+  a {
+  text-decoration: none;
+  color: lightcoral;
+  font-weight: bolder;
+  }
 }
+
+
 
 .hide-button:hover>a {
 
