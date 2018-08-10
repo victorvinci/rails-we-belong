@@ -14,21 +14,23 @@
     justify-content: space-around;
     list-style-type: none;
     background-color: lightgrey;
-    padding: 0 0 25px;
+    padding: 0;
     width: 80%;
     margin: 0 auto;
+    height: 90px;
 }
 
 .values li {
     background-color: khaki;
     text-transform: uppercase;
     padding: 10px;
+    box-shadow: 5px 5px;
+    margin-top: 10px;
 }
 
 .values li:hover {
     background-color: khaki;
     text-transform: uppercase;
-    padding: 20px;
     margin-top: 20px;
 }
 
