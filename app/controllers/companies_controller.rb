@@ -6,6 +6,10 @@ class CompaniesController < ApplicationController
     @companies = policy_scope(Company)
   end
 
+  def show
+    @reviews = @company.reviews.order(weighting: :desc)
+  end
+
   private
   def set_company
     @company = Company.find(params[:id])
