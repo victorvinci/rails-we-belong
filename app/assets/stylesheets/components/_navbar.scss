@@ -28,12 +28,14 @@ outline: none;
 // LOGO
 .navbar-wb-brand {
  font-size: 5.5rem;
- color: #62B2F5;
+ color: lightcoral;
+   opacity: 0.75;
 }
 
 .navbar-wb-brand:hover {
-  color: #62B2F5;
+  color: lightcoral;
   text-decoration: none;
+    opacity: 1;
 }
 
 // END LOGO
@@ -41,7 +43,8 @@ outline: none;
 /* User Avatar */
 .navbar-wb .avatar {
   font-size: 4rem;
-  color: #62B2F5;
+  color: lightcoral;
+    opacity: 0.75;
 }
 
 /* Right section */
@@ -59,12 +62,14 @@ outline: none;
 
 /* Navbar link */
 .navbar-wb-link {
-  color: #616668;
+  color: lightcoral;
   font-size: 14px;
+  opacity: 0.35;
 }
 .navbar-wb-link:hover {
-  color: #da552f;
+  color: lightcoral;
   text-decoration: none;
+  opacity: 1;
 }
 
 // START SEARCH NAVBAR
