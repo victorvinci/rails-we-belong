@@ -1,68 +1,27 @@
 <!-- temporary style for body. please erase once body default css is set -->
-<body style="padding-top: 100px;">
+<div class="container" style="margin: 10vh auto;">
+
   <% if @results.empty? && @companies.empty? %>
-  <p>Sua pesquisa -
-    <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
-    <% elsif @results.empty? %>
-    <h3> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h3>
-    <div class="container">
-      <div class="row">
-        <% @companies.each do |result| %>
-        <div class="col-xs-12">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('#');">
-            <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
-            <div class="card-description">
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-    </div>
+   <p>Sua pesquisa - <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
+
+  <% elsif @results.empty? %>
+    <%= render 'companies_result' %>
     <%= paginate @companies %>
-    <% else %>
+
+  <% else %>
+
     <% if @companies.empty? %>
-    <h4> Nenhum resultado para <strong><%= params[:query] %></strong> em Empresas.</h4>
+      <h4> Nenhum resultado para <strong><%= params[:query] %></strong> em Empresas.</h4>
+
     <% else %>
-    <h3> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h3>
-    <div class="container">
-      <div class="row">
-       <% @companies.each do |result| %>
-       <div class="col-xs-12">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('#');">
-          <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
-          <div class="card-description">
-          </div>
-        </div>
-      </div>
-      <% end %>
-    </div>
-  </div>
-  <% end %>
-  <h3> Resultados para <strong><%= params[:query] %></strong> em Avaliações:</h3>
-  <div>
-    <% @results.each do |result| %>
-    <div class="message">
-      <div class="avatar-large">
-        <%= image_tag 'carousel2.jpg' %>
-      </div>
-      <div class="message-name">
-       <span><h4>Empresa:</h4>
-        <h3>
-          <%= link_to result.company.name, company_path(result.company_id) %>
-        </h3></span>
-      </div>
-      <div class="message-body">
-        <h6>O que as pessoas acham da <strong><%= result.company.name %>:</strong></h6>
-        <p>
-          <%= result.pg_search_highlight.html_safe %>
-          | escrito em: <%= result.created_at.to_date.strftime("%d-%m-%Y") %>
-        </p>
-      </div>
-    </div>
+      <%= render 'reviews_result' %>
     <% end %>
+
+    <h3> Resultados para <strong><%= params[:query] %></strong> em Avaliações:</h3>
+      <%= render 'full_result' %>
   </div>
+
   <%= paginate @results %>
   <% end %>
-</body>
 
 

@@ -1,0 +1,16 @@
+  <h1> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h1>
+
+    <div class="container">
+      <div class="row">
+
+        <% @companies.each do |result| %>
+        <div class="col-xs-12">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/800x600/?business');">
+            <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
+            <div class="card-description">
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
