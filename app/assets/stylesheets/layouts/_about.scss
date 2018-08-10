@@ -29,7 +29,7 @@
 }
 
 .article-1 .background_color {
-background: lightblue;
+background: $webelongblue !important;
     grid-column: 2 / 5;
     grid-row: 1 / 6;
     z-index: -1;
@@ -70,7 +70,7 @@ background: lightblue;
 }
 
 .article-2 .background_color {
-  background: lightcoral;
+  background: $webelongblue !important;
   grid-column: 1 / 4;
   grid-row: 1 / 7;
   z-index: -1;
@@ -108,7 +108,7 @@ background: lightblue;
 }
 
 .article-3 .background_color {
-background: khaki;
+    background: $webelongblue !important;
     grid-column: 1 / 3;
     grid-row: 1 / 6;
     z-index: -1;
@@ -150,7 +150,7 @@ background: khaki;
 }
 
 .article-4 .background_color {
-  background: #9673A0;
+  background: $webelongblue !important;
   grid-column: 2 / 4;
   grid-row: 1 / 6;
   z-index: -1;
