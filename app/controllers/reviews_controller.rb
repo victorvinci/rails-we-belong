@@ -60,7 +60,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:user_position, :user_area, :content, answer_attributes: [:answer_1, :answer_2, :answer_3, :answer_4, :answer_5, :minority])
+    params.require(:review).permit(:user_position, :user_area, :pros, :cons, answer_attributes: [:answer_1, :answer_2, :answer_3, :answer_4, :answer_5, :minority])
   end
 
   def not_yet_reviewed?
