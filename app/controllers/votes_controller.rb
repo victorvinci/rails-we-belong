@@ -3,6 +3,7 @@ class VotesController < ApplicationController
   before_action :set_user
 
   def create
+
       @vote = Vote.new(vote_params)
       @vote.user = @user
       authorize @vote
@@ -51,8 +52,7 @@ class VotesController < ApplicationController
       @review.weighting += 5
     end
     @review.save
-    @vote.destroy
-    redirect_to company_path(@review.company), notice: 'Vote removed!'
+    @vote.destroy!
   end
 
   def vote_params
@@ -61,18 +61,13 @@ class VotesController < ApplicationController
 
   def attempt_save
     if @vote.save
-      redirect_to company_path(@vote.review.company), notice: 'Vote was successfully created'
     else
       render :new
     end
   end
 
   def attempt_update
-    if @vote.update
-      redirect_to company_path(@vote.review.company), notice: 'Vote changed!'
-    else
-      redirect_to company_path(@vote.review.company), notice: 'Something went wrong!'
-    end
+    @vote.save
   end
 
   def apply_score
