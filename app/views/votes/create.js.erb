@@ -1,0 +1,45 @@
+function calculateScore() {
+  const reviews = document.getElementById('review-details');
+  reviews.innerHTML = '<%= @review.user_position %> || <%= @review.user_area %> ||Score: <%= @review.weighting  %>'
+
+}
+
+function renderVoteButtons() {
+  const voteEmpty = '<%=@review.votes.where(user_id: current_user).first.nil?%>';
+  const upvote = document.getElementById('upvote');
+  const downvote = document.getElementById('downvote');
+
+  console.log(voteEmpty);
+  if (voteEmpty == 'true') {
+    console.log("vote is empty")
+    console.log(voteEmpty)
+    upvote.classList.add('far');
+    upvote.classList.remove('fas');
+    downvote.classList.add('far');
+    downvote.classList.remove('fas');
+  } else if (voteEmpty == 'false') {
+    console.log('else if voteEmpty == false');
+    fillInIcons(upvote, downvote);
+  }
+  else {
+    console.log('else path')
+  }
+}
+
+function fillInIcons(upvote, downvote) {
+    const voteType = `<%= @review.votes.where(user_id: current_user).first.nil? ? "nothing" : @review.votes.where(user_id: current_user).first.vote_type %>`;
+    if (voteType == 'upvote') {
+      upvote.classList.add('fas');
+      upvote.classList.remove('far');
+      downvote.classList.add('far');
+      downvote.classList.remove('fas');
+    } else {
+      upvote.classList.add('far');
+      upvote.classList.remove('fas');
+      downvote.classList.add('fas');
+      downvote.classList.remove('far');
+    }
+}
+
+calculateScore();
+renderVoteButtons();
