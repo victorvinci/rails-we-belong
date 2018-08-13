@@ -26,6 +26,7 @@
     padding: 1.4rem;
     line-height: 1.2;
     font-weight: normal;
+    font-size: 48px;
 }
 
 .article-1 .background_color {
@@ -48,6 +49,7 @@ background: $friendlyorange;
     background: white;
     padding: 2.4rem;
     margin: 0px;
+    font-size: 24px;
 }
 
 .article-2 {
@@ -67,6 +69,7 @@ background: $friendlyorange;
   padding: 1.4rem;
   line-height: 1.2;
   font-weight: normal;
+  font-size: 48px;
 }
 
 .article-2 .background_color {
@@ -87,6 +90,7 @@ background: $friendlyorange;
     background: white;
     padding: 2.4rem;
     margin: 0px;
+    font-size: 24px;
 }
 
 .article-3 {
@@ -95,6 +99,7 @@ background: $friendlyorange;
   grid-template-rows: 20% 2fr auto auto 1fr;
   width: 100%;
   height: 100%;
+
 }
 
 .article-3 h1 {
@@ -105,10 +110,11 @@ background: $friendlyorange;
     padding: 1.4rem;
     line-height: 1.2;
     font-weight: normal;
+    font-size: 48px;
 }
 
 .article-3 .background_color {
-background: $warmred;
+background: $friendlyorange;
     grid-column: 1 / 3;
     grid-row: 1 / 6;
     z-index: -1;
@@ -127,6 +133,7 @@ background: $warmred;
     background: white;
     padding: 2.4rem;
     margin: 0px;
+    font-size: 24px;
 }
 
 .article-4 {
@@ -147,10 +154,11 @@ background: $warmred;
   padding: 1.4rem;
   line-height: 1.2;
   font-weight: normal;
+  font-size: 48px;
 }
 
 .article-4 .background_color {
-  background: $calmingblue;
+  background: $professionalpurple;
   grid-column: 2 / 4;
   grid-row: 1 / 6;
   z-index: -1;
@@ -167,4 +175,5 @@ background: $warmred;
     background: white;
     padding: 2.4rem;
     margin: 0px;
+    font-size: 24px;
 }
