@@ -5,24 +5,18 @@ function calculateScore() {
 }
 
 function renderVoteButtons() {
-  const voteEmpty = '<%=@review.votes.where(user_id: current_user).first.nil?%>';
+  const voteEmpty = '<%= @review.votes.where(user_id: current_user).first.nil?%>';
   const upvote = document.getElementById('upvote');
   const downvote = document.getElementById('downvote');
 
   console.log(voteEmpty);
   if (voteEmpty == 'true') {
-    console.log("vote is empty")
-    console.log(voteEmpty)
     upvote.classList.add('far');
     upvote.classList.remove('fas');
     downvote.classList.add('far');
     downvote.classList.remove('fas');
-  } else if (voteEmpty == 'false') {
-    console.log('else if voteEmpty == false');
+  } else {
     fillInIcons(upvote, downvote);
-  }
-  else {
-    console.log('else path')
   }
 }
 
