@@ -19,9 +19,9 @@
 
         <%= f.input :user_area %>
         <%= f.input :user_position %>
-        <%= f.input :content %>
+        <%= f.input :pros, label: 'Pros' %>
+        <%= f.input :cons, label: 'Contras' %>
         <%= f.simple_fields_for :answer do |a| %>
-
 
 
         <% collection = [['N/A', '3'], ['Discordo Fortemente', '1'], ['Discordo', '2'], ['Não Concordo nem Discordo', '3'], ['Concordo', '4'], ['Concordo Fortemente', '5']] %>

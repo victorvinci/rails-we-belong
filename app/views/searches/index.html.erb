@@ -1,27 +1,24 @@
-<!-- temporary style for body. please erase once body default css is set -->
-<div class="container" style="margin: 10vh auto;">
+
+<div class="container" style="margin: 10vh auto; height: 100%;">
 
   <% if @results.empty? && @companies.empty? %>
-   <p>Sua pesquisa - <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
+
+    <p>Sua pesquisa - <%= params[:query] %> - não retornou nenhum resultado. Por favor tente outra palavra-chave.</p>
 
   <% elsif @results.empty? %>
+
     <%= render 'companies_result' %>
-    <%= paginate @companies %>
+
+  <% elsif @companies.empty? %>
+
+    <%= render 'reviews_result' %>
 
   <% else %>
 
-    <% if @companies.empty? %>
-      <h4> Nenhum resultado para <strong><%= params[:query] %></strong> em Empresas.</h4>
+    <%= render 'companies_result' %>
+    <br>
+    <%= render 'reviews_result' %>
 
-    <% else %>
-      <%= render 'reviews_result' %>
-    <% end %>
-
-    <h3> Resultados para <strong><%= params[:query] %></strong> em Avaliações:</h3>
-      <%= render 'full_result' %>
-  </div>
-
-  <%= paginate @results %>
   <% end %>
 
-
+</div>

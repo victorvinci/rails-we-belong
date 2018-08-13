@@ -1,12 +1,30 @@
-<h3> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h3>
-<div class="container">
-  <div class="row">
-    <% @companies.each do |result| %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/800x600/?tech');">
-        <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
-        <div class="card-description">
-        </div>
-      </div>
-    <% end %>
+<section class="container-results">
+
+  <div class="header-results">
+    <h1> Resultados para <strong><%= params[:query] %></strong> em Avaliações:</h1>
+    <p>Total Results: X</p>
   </div>
-</div>
+
+  <ul>
+    <% @results.each do |result| %>
+      <li class="container-cards">
+
+        <i class="avatar-result-user fa fa-user"></i>
+
+        <h2 class="message-title">Titulo Review</h2>
+
+        <div class="message-body">
+
+        <p class="user-review"><%= result.pg_search_highlight.html_safe %></p>
+
+        <p class="created-at"> <%= link_to "View More", company_path(result.company_id) %></p>
+        </div>
+
+        <p class="rating-user"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+
+      </li>
+    <% end %>
+  </ul>
+
+<%= paginate @results %>
+</section>
