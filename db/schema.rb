@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 2018_08_13_193101) do
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.integer "importance_1"
-    t.integer "weighting_1"
     t.integer "answer_1"
     t.integer "importance_2"
     t.integer "weighting_2"
@@ -90,12 +88,13 @@ ActiveRecord::Schema.define(version: 2018_08_13_193101) do
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "company_id"
-    t.text "content"
+    t.text "pros"
     t.string "user_position"
     t.string "user_area"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "weighting"
+    t.text "cons"
     t.index ["company_id"], name: "index_reviews_on_company_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end

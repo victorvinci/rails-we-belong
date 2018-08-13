@@ -7,6 +7,8 @@ class EmployeeProfilesController < ApplicationController
     authorize @employee_profile
   end
 
+
+
   private
 
   def set_user

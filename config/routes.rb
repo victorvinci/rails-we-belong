@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'searches/index'
-  devise_for :users
+  devise_for :users, controllers: {
+        registrations: 'users/registrations'
+      }
   root to: 'pages#home'
+  get '/about', to: 'pages#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :companies, only: %i[index show] do
     resources :reviews, only: %i[index new create] do
