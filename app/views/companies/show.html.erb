@@ -15,13 +15,17 @@
 
       <div class="reviews">
         <h4 class="central-title"><mark>Reviews</mark></h4>
-        <%= link_to new_company_review_path(@company) do %>
-          <i class="far fa-edit" style="padding-top: 15px;"></i> Faça sua própria avaliação
+        <% if @company.reviews.where(user_id: current_user).empty? %>
+          <%= link_to new_company_review_path(@company) do %>
+            <i class="far fa-edit" style="padding-top: 15px;"></i> Faça sua própria avaliação
+          <% end %>
         <% end %>
+
 
         <% @reviews.each do |review| %>
         <div class="review">
-          <p><%= review.content %> </p>
+          <p><strong>Pros:</strong> <%= review.pros %> </p>
+          <p><strong>Contras:</strong> <%= review.cons %> </p>
           <p id="review-details"><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
           <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
           method: 'post', remote: true do%>
