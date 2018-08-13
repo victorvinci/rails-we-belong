@@ -1,16 +1,25 @@
-  <h1> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h1>
+<section class="container-results">
 
-    <div class="container">
-      <div class="row">
+  <div class="header-results">
+    <h1> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h1>
+    <p>Total Results: X</p>
+  </div>
 
-        <% @companies.each do |result| %>
-        <div class="col-xs-12">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/800x600/?business');">
-            <%= link_to result.pg_search_highlight.html_safe, company_path(result) %>
-            <div class="card-description">
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-    </div>
+  <ul>
+    <% @companies.each do |result| %>
+      <li class="container-cards">
+
+          <h2 class="link-result"><%= link_to result.pg_search_highlight.html_safe, company_path(result) %></h2>
+
+          <i class="avatar-company far fa-building"></i>
+
+          <p class="total-reviews"><%= result.updated_at %></p>
+
+          <p class="rating-company"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+
+      </li>
+    <% end %>
+  </ul>
+
+<%= paginate @companies %>
+</section>
