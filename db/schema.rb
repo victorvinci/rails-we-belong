@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_155220) do
+ActiveRecord::Schema.define(version: 2018_08_13_193101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_08_09_155220) do
     t.integer "answer_4_average_score"
     t.integer "answer_5_total_score"
     t.integer "answer_5_average_score"
+    t.string "logo_url"
     t.index ["industry_id"], name: "index_companies_on_industry_id"
   end
 
