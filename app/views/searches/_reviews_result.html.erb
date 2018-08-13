@@ -11,23 +11,20 @@
 
         <i class="avatar-result-user fa fa-user"></i>
 
-        <h2 class="message-title"><mark>Titulo Review</mark></h2>
+        <h2 class="message-title">Titulo Review</h2>
 
         <div class="message-body">
 
         <p class="user-review"><%= result.pg_search_highlight.html_safe %></p>
 
-        <p class="created-at"> | escrito em: <%= result.created_at.to_date.strftime("%d-%m-%Y") %></p>
-
+        <p class="created-at"> <%= link_to "View More", company_path(result.company_id) %></p>
         </div>
-
-        <h3 class="view-more"><%= link_to result.company.name, company_path(result.company_id) %></h3>
 
         <p class="rating-user"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
 
       </li>
-
     <% end %>
   </ul>
 
+<%= paginate @results %>
 </section>

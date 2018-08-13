@@ -4,7 +4,6 @@
   display: grid;
   max-width: 750px;
   width: 100%;
-  // background-color: #F0F0F0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   grid-template-rows: repeat(auto-fit, minmax(10%, 1fr));
   margin: 0 auto;
@@ -32,16 +31,15 @@
 .container-cards {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto;
-  /* height: auto; */
+  grid-template-rows: 1fr 1fr auto;
   width: 90%;
   color: white;
   border: 1px dotted black;
   margin: 15px;
-  padding: 25px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 10px;
   background-color: white;
   color: black;
+  grid-gap: 0.5rem;
 
   a:hover {
     text-decoration: none;
@@ -54,33 +52,39 @@
 .link-result {
   font-size: 2rem;
   margin: 0;
-  align-self: center;
-  text-align: center;
+  text-align: left;
+  grid-row: 1 / 3;
+  grid-column: 2 / 4;
+  padding: 18px 0 0 10px;
 }
 
 .avatar-company {
-  grid-row: 1;
+  grid-row: 1 / 3;
   justify-self: center;
   text-align: center;
   font-size: 5rem;
   grid-column: 1;
+  align-self: center;
+  padding: 10px 0 0 0;
 }
 
 .total-reviews {
   font-size: 10px;
   text-align: center;
-  margin: 15px 0 0 0;
-  grid-row: 2;
+  margin: 0 auto;
+  grid-row: 3;
   grid-column: 1;
+  align-self: center;
 }
 
 .rating-company {
-  font-size: 1.5rem;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  text-align: center;
-  align-self: center;
+  font-size: 16px;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  text-align: left;
+  /* align-self: center; */
   margin: 0;
+  padding: 0 0 10px 10px;
 }
 
 // COMPANIES CARD END
@@ -88,8 +92,8 @@
 // CARD REVIEW START
 
 .message-body {
-  grid-row: 2;
-  grid-column: 2 / 4;
+  grid-row: 3;
+  grid-column: 1 / 4;
   border-left: 1px solid lightgrey;
   border-top: 1px solid lightgrey;
 
@@ -111,15 +115,19 @@
   font-size: 23px;
   text-align: left;
   margin: 0;
-  align-self: initial;
+  align-self: center;
+  grid-row: 1;
+  grid-column: 2 / 3;
+  padding: 1%;
 }
 
 .avatar-result-user {
-  grid-row: 1;
-  text-align: left;
+  grid-row: 1 / 3;
+  text-align: center;
   font-size: 5rem;
   grid-column: 1;
-  padding: 0 0 10px 10px;
+  align-self: baseline;
+  padding: 10px;
 }
 
 .view-more {
@@ -128,14 +136,15 @@
   font-size: 15px;
   text-align: left;
   align-self: end;
+  margin: 0;
 }
 
 .rating-user {
-  font-size: 1.5rem;
-  grid-column: 3 / 4;
-  grid-row: 1;
+  font-size: 2rem;
+  grid-column: 1 / 3;
+  grid-row: 2;
   text-align: center;
-  align-self: initial;
+  align-self: center;
   margin: 0;
 }
 // CARD REVIEW END

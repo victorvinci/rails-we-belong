@@ -16,8 +16,10 @@
           <p class="total-reviews"><%= result.updated_at %></p>
 
           <p class="rating-company"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+
       </li>
     <% end %>
   </ul>
 
+<%= paginate @companies %>
 </section>

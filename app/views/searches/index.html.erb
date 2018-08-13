@@ -1,3 +1,4 @@
+
 <div class="container" style="margin: 10vh auto; height: 100%;">
 
   <% if @results.empty? && @companies.empty? %>
@@ -14,10 +15,10 @@
 
   <% else %>
 
-    <%= render 'full_result' %>
+    <%= render 'companies_result' %>
+    <br>
+    <%= render 'reviews_result' %>
 
   <% end %>
 
 </div>
-
-   <%= paginate @companies %>
