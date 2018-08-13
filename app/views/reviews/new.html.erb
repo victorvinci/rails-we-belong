@@ -25,12 +25,12 @@
 
 
         <% collection = [['N/A', '3'], ['Discordo Fortemente', '1'], ['Discordo', '2'], ['Não Concordo nem Discordo', '3'], ['Concordo', '4'], ['Concordo Fortemente', '5']] %>
-        <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade do local onde ela está localizada?", checked: collection[0] %>
-        <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que refletem a realidade do local onde ela está localizada?", checked: collection[0] %>
-        <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", checked: collection[0] %>
-        <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", checked: collection[0] %>
-        <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", checked: collection[0] %>
-        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Você se considera parte de uma minoria?", checked: collection[0] %>
+        <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade do local onde ela está localizada?", selected: 'N/A' %>
+        <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que refletem a realidade do local onde ela está localizada?", selected: 'N/A' %>
+        <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", selected: 'N/A' %>
+        <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", selected: 'N/A' %>
+        <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", selected: 'N/A' %>
+        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Você se considera parte de uma minoria?", selected: 'N/A' %>
         <% end  %>
         <%= f.button :submit %>
         <% end %>
