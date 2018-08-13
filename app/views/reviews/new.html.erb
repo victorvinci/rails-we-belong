@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <div class="review-form">
-        <h1>New review for <%= @company.name %></h1>
+        <h1>Nova <em>review</em> para: <br> <%= @company.name %></h1>
         <%= current_user.email %>
         <%= simple_form_for [@company, @review] do |f| %>
         <% if @review.errors.any? %>
@@ -15,19 +15,22 @@
           </ul>
         </div>
         <% end %>
+
+
         <%= f.input :user_area %>
         <%= f.input :user_position %>
         <%= f.input :pros, label: 'Pros' %>
         <%= f.input :cons, label: 'Contras' %>
         <%= f.simple_fields_for :answer do |a| %>
 
-        <% collection = [['N/A', '3'], ['Strongly Disagree', '1'], ['Disagree', '2'], ['Neutral', '3'], ['Agree', '4'], ['Strongly Agree', '5']] %>
-        <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade a sua volta?", selected: 'N/A' %>
-        <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que reflete a realidade a sua volta?", selected: 'N/A' %>
-        <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", selected: 'N/A' %>
-        <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", selected: 'N/A' %>
-        <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", selected: 'N/A' %>
-        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Are you part of a minority?", checked: collection[0] %>
+
+        <% collection = [['N/A', '3'], ['Discordo Fortemente', '1'], ['Discordo', '2'], ['Não Concordo nem Discordo', '3'], ['Concordo', '4'], ['Concordo Fortemente', '5']] %>
+        <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade do local onde ela está localizada?", checked: collection[0] %>
+        <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que refletem a realidade do local onde ela está localizada?", checked: collection[0] %>
+        <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", checked: collection[0] %>
+        <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", checked: collection[0] %>
+        <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", checked: collection[0] %>
+        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Você se considera parte de uma minoria?", checked: collection[0] %>
         <% end  %>
         <%= f.button :submit %>
         <% end %>

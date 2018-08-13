@@ -1,0 +1,76 @@
+.message {
+  display: grid;
+  align-items: center;
+  /* height: 250px; */
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 100px auto;
+}
+.message .avatar-large {
+  grid-column: 1 / 2;
+  justify-self: center;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.message-name {
+  padding: 10px;
+  min-width: 100px;
+  background-color: khaki;
+  margin: 0 0 0 10px;
+  grid-column: 2 / 4;
+  grid-row: 1 /2;
+  width: 100%;
+}
+
+.message-name h3 {
+  font-size: 2.7rem;
+}
+
+.message-name h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.message-name p {
+  font-size: 13px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.message-body {
+  padding: 35px;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.7);
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  border-bottom: 1px solid black;
+}
+
+.message-body h6 {
+  font-size: 2.7rem;
+}
+
+.message-status {
+  font-size: 14px;
+  font-weight: bold;
+}
+.status.accepted {
+  color: #04A366;
+}
+.status.declined {
+  color: red;
+}
+.status.pending {
+  color: lightgrey;
+}
+
+.avatar-large img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.review-form h1 {
+  background-color: $friendlyorange;
+}

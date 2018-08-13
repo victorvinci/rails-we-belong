@@ -4,14 +4,18 @@ class ReviewsController < ApplicationController
   before_action :set_company
 
   def new
+
+    # redirect_to new_employee_profile_path unless current_user.has_profile?
     @review = Review.new
     @review.build_answer
     @review.user = current_user
     authorize @review
     unless not_yet_reviewed?
-      redirect_to company_path(Company.find(params[:company_id])), notice: 'You have already reviewed this company'
+      redirect_to company_path(Company.find(params[:company_id])),
+        notice: 'Você já avaliou essa empresa.'
     end
   end
+
 
   def create
     @review = Review.new(review_params)
@@ -19,8 +23,8 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.company = Company.find(params[:company_id])
     if @review.save
-      update_associated_company_score
-      redirect_to company_path(@review.company), notice: 'Review was successfully created.'
+      update_associated_company_score redirect_to company_path(@review.company),
+      notice: 'Review criado com sucesso.'
     else
       render :new
     end
