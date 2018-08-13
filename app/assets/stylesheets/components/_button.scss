@@ -1,0 +1,152 @@
+/* Common button styles */
+.button {
+  float: left;
+  text-align: center;
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  margin: 1em;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button:focus {
+  outline: none;
+}
+.button > span {
+  vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+  color: #37474f;
+  border-color: #37474f;
+}
+.bg-2 .button {
+  color: #ECEFF1;
+  border-color: #ECEFF1;
+}
+.bg-3 .button {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Sizes */
+.button--size-s {
+  font-size: 14px;
+}
+.button--size-m {
+  font-size: 16px;
+}
+.button--size-l {
+  font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button--text-thin {
+  font-weight: 300;
+}
+.button--text-medium {
+  font-weight: 500;
+}
+.button--text-thick {
+  font-weight: 600;
+}
+.button--round-s {
+  border-radius: 5px;
+}
+.button--round-m {
+  border-radius: 15px;
+}
+.button--round-l {
+  border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+  border: 1px solid;
+}
+.button--border-medium {
+  border: 2px solid;
+}
+.button--border-thick {
+  border: 3px solid;
+}
+
+/* Individual button styles */
+
+/*w */
+.button-w {
+  overflow: hidden;
+  padding: 0;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  padding: 1em 2em;
+  font-size: 14px;
+}
+.button-w::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: #3f51b5;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+.button-w > span {
+  display: block;
+}
+.button-w.button--inverted {
+  color: #7986cb;
+}
+.button-w.button--inverted:after {
+  color: #fff;
+}
+.button-w::after,
+.button-w > span {
+  padding: 1em 2em;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button-w:hover {
+  border-color: #3f51b5;
+  background-color: rgba(63, 81, 181, 0.1);
+  text-decoration: none;
+  color: #3f51b5;
+}
+.button-w.button--inverted:hover {
+  border-color: #21333C;
+  background-color: #21333C;
+}
+.button-w:hover::after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.button-w:hover > span {
+  opacity: 0.6;
+  -webkit-transform: translate3d(0, -5%, 0);
+  transform: translate3d(0, -5%, 0);
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom: none !important ;
+}
