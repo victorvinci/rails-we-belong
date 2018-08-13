@@ -23,7 +23,8 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.company = Company.find(params[:company_id])
     if @review.save
-      update_associated_company_score redirect_to company_path(@review.company),
+      update_associated_company_score
+      redirect_to company_path(@review.company),
       notice: 'Review criado com sucesso.'
     else
       render :new
@@ -64,7 +65,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:user_position, :user_area, :pros, :cons, answer_attributes: [:answer_1, :answer_2, :answer_3, :answer_4, :answer_5, :minority])
+    params.require(:review).permit(:user_position, :user_area, :content, answer_attributes: [:answer_1, :answer_2, :answer_3, :answer_4, :answer_5, :minority])
   end
 
   def not_yet_reviewed?
