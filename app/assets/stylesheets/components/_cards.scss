@@ -1,57 +1,141 @@
-.card {
-  height: 250px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  background-size: cover !important;
-  background-position: center;
+// DEFAULT CONTAINER START
+
+.container-results {
+  display: grid;
+  max-width: 750px;
+  width: 100%;
+  // background-color: #F0F0F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  grid-template-rows: repeat(auto-fit, minmax(10%, 1fr));
+  margin: 0 auto;
+}
+
+// DEFAULT CONTAINER END
+
+// DEFAULT HEADER FOR RESULTS PAGE START
+
+.header-results {
+  margin: 0 0 0 30px;
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+// DEFAULT HEADER FOR RESULTS PAGE END
+
+// DEFAULT CONTAINER CARDS START
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  /* height: auto; */
+  width: 90%;
   color: white;
-  position: relative;
-  margin: 16px 0 16px 0;
-  border-radius: 5px;
-  width: 100%;
+  border: 1px dotted black;
+  margin: 15px;
+  padding: 25px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: white;
+  color: black;
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+// DEFAULT CONTAINER CARDS END
+
+// COMPANIES CARD START
+.link-result {
+  font-size: 2rem;
+  margin: 0;
+  align-self: center;
+  text-align: center;
 }
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+
+.avatar-company {
+  grid-row: 1;
+  justify-self: center;
+  text-align: center;
+  font-size: 5rem;
+  grid-column: 1;
+}
+
+.total-reviews {
+  font-size: 10px;
+  text-align: center;
+  margin: 15px 0 0 0;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.rating-company {
+  font-size: 1.5rem;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+  align-self: center;
+  margin: 0;
+}
+
+// COMPANIES CARD END
+
+// CARD REVIEW START
+
+.message-body {
+  grid-row: 2;
+  grid-column: 2 / 4;
+  border-left: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+
+  .user-review {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .created-at{
+    font-size: 10px;
+    margin: 0;
+    text-align: end;
+  }
+}
+
+.message-title {
+  font-size: 23px;
+  text-align: left;
+  margin: 0;
+  align-self: initial;
+}
+
+.avatar-result-user {
+  grid-row: 1;
+  text-align: left;
+  font-size: 5rem;
+  grid-column: 1;
+  padding: 0 0 10px 10px;
+}
+
+.view-more {
+  grid-column: 1;
+  grid-row: 2;
   font-size: 15px;
-  text-transform: uppercase;
-}
-.card-description {
-  height: 500px;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
-.card a {
-  position: absolute;
-  /* top: 0; */
-  bottom: 10px;
-  right: 0px;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0.7;
-  font-size: x-large;
-  padding: 10px;
+  text-align: left;
+  align-self: end;
 }
 
-.card a:hover {
-  opacity: 1;
-  text-decoration: none;
+.rating-user {
+  font-size: 1.5rem;
+  grid-column: 3 / 4;
+  grid-row: 1;
+  text-align: center;
+  align-self: initial;
+  margin: 0;
 }
+// CARD REVIEW END
