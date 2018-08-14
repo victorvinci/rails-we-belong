@@ -41,6 +41,7 @@ class Company < ApplicationRecord
     self.answer_3_average_score = 50
     self.answer_4_average_score = 50
     self.answer_5_average_score = 50
+    self.final_rating = 50
     self.save!
   end
 end
