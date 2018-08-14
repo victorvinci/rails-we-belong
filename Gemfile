@@ -25,9 +25,10 @@ gem "letter_opener", group: :development
 gem 'devise'
 gem 'pundit'
 
-# LinkedIn API
+# Oauth API
 gem 'omniauth'
 gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-facebook'
 
 # Gem for custom-search
 gem 'pg_search'
