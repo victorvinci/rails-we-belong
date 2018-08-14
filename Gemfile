@@ -8,6 +8,8 @@ gem 'puma'
 gem 'rails', '5.2.0'
 gem 'redis'
 gem 'postmark-rails'
+#gem to transform site in https
+gem 'rack-ssl-enforcer'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
@@ -23,9 +25,10 @@ gem "letter_opener", group: :development
 gem 'devise'
 gem 'pundit'
 
-# LinkedIn API
+# Oauth API
 gem 'omniauth'
 gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-facebook'
 
 # Gem for custom-search
 gem 'pg_search'

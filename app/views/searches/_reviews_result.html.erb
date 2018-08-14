@@ -20,7 +20,14 @@
         <p class="created-at"> <%= link_to "View More", company_path(result.company_id) %></p>
         </div>
 
-        <p class="rating-user"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+        <p class="rating-user">
+          <% (result.company.final_rating / 20).times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% if (result.company.final_rating % 20) > 0 %>
+            <i class="fas fa-star-half"></i>
+          <% end %>
+        </p>
 
       </li>
     <% end %>

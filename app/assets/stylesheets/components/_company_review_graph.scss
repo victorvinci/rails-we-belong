@@ -46,7 +46,7 @@ margin-bottom: 20px;
   &:after {
     content: "";
     display: block;
-    background-color: #3d9970;
+    background-color: $webelongpurple;
     width: 50px;
     margin-bottom: 10px;
     height: 90%;
@@ -59,7 +59,7 @@ margin-bottom: 20px;
   &:hover,
   &:focus {
     &:after {
-       background-color: #aaa;
+       background-color: $webelongorange;
     }
   }
 }

@@ -1,6 +1,6 @@
 <body>
-
-<div class="container" style="height: 100vh; margin: 10vh auto;">
+<div style="height:70px;"></div>
+<div class="container">
   <h1 class="company"><%= @company.name %></h1>
     <div class="company-profile">
 
@@ -22,8 +22,9 @@
 
         <% @reviews.each do |review| %>
         <div class="review">
-          <p><strong>Pros:</strong> <%= review.pros %> </p>
-          <p><strong>Contras:</strong> <%= review.cons %> </p>
+
+          <p><%= review.content %></p>
+
           <p id="review-details"><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
           <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
           method: 'post', remote: true do%>
