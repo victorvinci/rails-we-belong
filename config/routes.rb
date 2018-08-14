@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'searches/index'
   devise_for :users, controllers: {
-        registrations: 'users/registrations'
+        registrations: 'users/registrations',
+        omniauth_callbacks: 'users/omniauth_callbacks'
       }
   root to: 'pages#home'
   get '/about', to: 'pages#about'
