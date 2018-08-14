@@ -22,7 +22,9 @@
 
         <% @reviews.each do |review| %>
         <div class="review">
+
           <p><%= review.content %></p>
+
           <p id="review-details"><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
           <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
           method: 'post', remote: true do%>
