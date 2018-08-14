@@ -1,15 +1,14 @@
-<br>
-<h4> Por favor, preencha o cadastro abaixo com seus dados pessoais. </h4>
-<h6> Seus dados estarão seguros e suas <em>reviews</em> serão sempre anônimas. </h6>
-<h6> Se não quiser declarar, favor escolha a opção <em>"Não quero declarar"</em>, disponível em todos os campos.</h6>
+
+<h3> Por favor, preencha o cadastro abaixo com seus dados pessoais. </h3>
+<p> Seus dados estarão seguros e suas <em>avaliações</em> serão sempre anônimas. </p>
 
 <%= simple_fields_for @employee_profile do |f| %>
-  <%= f.input :sex, collection: ["Não quero declarar", "Homem", "Mulher" "Outro"], label: 'Sexo Biológico' %>
-  <%= f.input :gender_identity, collection: ["Não quero declarar", "Homem Cis", "Mulher Cis", "Homen Trans", "Mulher Trans", "Travesti", "Outros (Queer, Agênero, etc)"], label: 'Identidade de Gênero' %>
-  <%= f.input :sexual_orientation, collection: ["Não quero declarar", "Assexual", "Bissexual", "Homossexual", "Heterossexual", "Pansexual", "Outros"], label: 'Orientação Sexual' %>
-  <%= f.input :age_group, collection: ["Não quero declarar", "Menos de 18 anos", "de 18 a 24 anos", "de 24 a 29 anos", "de 30 a 39 anos", "de 40 a 49 anos", "de 50 a 59 anos", "mais de 60 anos (inclusive)"] %>
-   <%= f.input :ethnicity, collection: ["Não quero declarar", "Branco", "Preto", "Pardo", "Amarelo", "Indígena", "Outros"], label: 'Etnia, Raça ou Cor' %>
-  <%= f.input :disability, collection: ["Não quero declarar", "Sim", "Não"], label: 'Você se considera pessoa com deficiência' %>
+  <%= f.input :sex, collection: ["Não quero declarar", "Homem", "Mulher", "Outro"], selected: 'Não quero declarar', label: 'Sexo Biológico' %>
+  <%= f.input :gender_identity, collection: ["Não quero declarar", "Homem Cis", "Mulher Cis", "Homen Trans", "Mulher Trans", "Travesti", "Outros (Queer, Agênero, etc)"], selected: 'Não quero declarar', label: 'Identidade de Gênero' %>
+  <%= f.input :sexual_orientation, collection: ["Não quero declarar", "Assexual", "Bissexual", "Homossexual", "Heterossexual", "Pansexual", "Outros"], selected: 'Não quero declarar', label: 'Orientação Sexual' %>
+   <%= f.input :ethnicity, collection: ["Não quero declarar", "Branco", "Preto", "Pardo", "Amarelo", "Indígena", "Outros"], selected: 'Não quero declarar', label: 'Etnia, Raça ou Cor' %>
+  <%= f.input :age_group, collection: ["Não quero declarar", "Menos de 18 anos", "de 18 a 24 anos", "de 24 a 29 anos", "de 30 a 39 anos", "de 40 a 49 anos", "de 50 a 59 anos", "Mais de 60 anos (inclusive)"], selected: 'Não quero declarar' %>
+  <%= f.input :disability, collection: ["Não quero declarar", "Sim", "Não"], selected: 'Não quero declarar', label: 'Você se considera pessoa com deficiência' %>
 
   <%# f.button :submit, "Create", class: "btn btn-primary" %>
 <% end %>

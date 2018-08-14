@@ -1,8 +1,8 @@
 <section class="container-results">
 
   <div class="header-results">
-    <h1> Resultados para <strong><%= params[:query] %></strong> em Empresas:</h1>
-    <p>Total Results: X</p>
+    <h1> <%= @companies.size %> resultados para <strong><%= params[:query] %></strong> em Empresas:</h1>
+    <!-- <p>Total Results: X</p> -->
   </div>
 
   <ul>
@@ -13,7 +13,7 @@
 
           <i class="avatar-company far fa-building"></i>
 
-          <p class="total-reviews"><%= result.updated_at %></p>
+          <p class="total-reviews"><%= result.reviews.count %> avaliações</p>
 
           <p class="rating-company"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
 
