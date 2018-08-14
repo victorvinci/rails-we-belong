@@ -92,7 +92,7 @@
   max-width: 950px;
 }
 
- p {
+ .slogan {
   text-transform: uppercase;
   grid-column: 3 / 3;
   grid-row: 3 / 4;
@@ -146,31 +146,40 @@
   color: $professionalpurple !important;
 }
 
-.hide-button>p {
+.hide-button > a {
   display: none;
 }
 
-.hide-button>a {
+.hide-button > p {
   display: block;
   font-size: 5rem;
   color: white;
 }
 
-.hide-button:hover>p {
+.hide-button:hover > a {
   display: block;
   text-shadow: 1px 1px 2px black;
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: center;
-  a {
-  text-decoration: none;
-  color: $professionalpurple;
-
-  // font-weight: bolder;
-  // text-shadow: 1px 1px 2px $professionalpurple;
-
   }
+
+.hide-button:hover > p {
+  display: none;
 }
 
-.hide-button:hover>a {
-  display: none;
+
+
+.hero .hide-button {
+  grid-column: 3;
+  grid-row: 4;
+  align-self: center;
+  width: 50%;
+  justify-self: center;
+  line-height: 1.5;
+  margin: 0;
+  background: transparent;
+  padding: 2%;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 2;
 }
