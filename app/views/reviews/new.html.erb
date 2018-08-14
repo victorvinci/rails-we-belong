@@ -17,9 +17,10 @@
         <% end %>
 
 
-        <%= f.input :user_area %>
-        <%= f.input :user_position %>
-        <%= f.input :content, label: 'O que você quer falar sobre a empresa?' %>
+        <%= f.input :user_area, label: "Sua área ou departamento mais recente nesta empresa:" %>
+        <%= f.input :user_position, label: "Sua posição ou cargo mais recente nesta empresa:" %>
+        <%= f.input :content, label: "Fale aqui sobre como esta empresa trata sobre o assunto Diversidade e Inclusão", placeholder: "Escreva pontos positivos e a melhorar e deixe suas recomendações aos líderes dessa empresa." %>
+        <p style="font-size: 10px; margin-top: -16px;">Reservamo-nos ao direito de excluir comentários desagragadores ou que estejam de desacordo com os valores da WeBelong.</p>
         <%= f.simple_fields_for :answer do |a| %>
 
 
