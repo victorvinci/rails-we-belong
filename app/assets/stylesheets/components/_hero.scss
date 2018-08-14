@@ -62,7 +62,7 @@
   margin: 20px 30px 0 0;
 }
 
- h1 {
+ .title-banner {
   /* text-align: left; */
   text-transform: uppercase;
   grid-column: 3 / 4;
@@ -70,16 +70,18 @@
   font-size: calc(3rem + 4vw);
   /* margin-top: 1rem; */
   /* margin-right: 1rem; */
-  /* width: 100%; */
+  width: 95%;
   z-index: 2;
   /* height: 100%; */
-  padding: 5% 5% 0 0;
   /* max-height: 100px; */
   align-self: end;
   justify-self: first baseline;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
 }
 
- h2 {
+ .banner-search {
   text-transform: uppercase;
   background: transparent;
   padding: 1rem 0.5rem 0.6rem;
