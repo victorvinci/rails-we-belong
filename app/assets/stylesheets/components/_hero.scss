@@ -8,11 +8,12 @@
 
 .hero {
   display: grid;
-  grid-template-columns: 0.5fr 2fr auto 2fr 0.5fr;
+  grid-template-columns: 15% 1.5fr auto 2fr 5%;
   grid-template-rows: 0.5fr 1fr 1.5fr 0.5fr auto;
   width: 100%;
   height: 100vh;
   justify-items: end;
+  /* margin: 0 auto; */
 
  .background-white {
   background: white;
@@ -182,4 +183,8 @@
   font-size: 1.5rem;
   text-align: center;
   z-index: 2;
+}
+
+.fix-grid {
+  grid-column: 1;
 }
