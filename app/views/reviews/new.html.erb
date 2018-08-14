@@ -29,7 +29,6 @@
         <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", selected: 'N/A' %>
         <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", selected: 'N/A' %>
         <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", selected: 'N/A' %>
-        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Você se considera parte de uma minoria?", selected: 'N/A' %>
         <% end  %>
         <%= f.button :submit %>
         <% end %>

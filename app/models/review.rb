@@ -5,7 +5,6 @@ class Review < ApplicationRecord
   has_one :answer
   has_many :votes
   accepts_nested_attributes_for :answer
-  after_create :calculate_weighting
 
   pg_search_scope :search,
       against: [ :content ],
@@ -33,12 +32,5 @@ class Review < ApplicationRecord
                   }
       }
   paginates_per 5
-
-  private
-
-  def calculate_weighting
-    self.answer.minority? ? self.weighting = 130 : self.weighting = 100
-    self.save!
-  end
 
 end
