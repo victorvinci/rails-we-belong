@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2018_08_14_135116) do
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
+    t.integer "importance_1"
+    t.integer "weighting_1"
     t.integer "answer_1"
     t.integer "importance_2"
     t.integer "weighting_2"
@@ -53,9 +55,6 @@ ActiveRecord::Schema.define(version: 2018_08_14_135116) do
     t.integer "answer_4_average_score"
     t.integer "answer_5_total_score"
     t.integer "answer_5_average_score"
-
-    t.string "logo_url"
-
     t.integer "final_rating"
     t.index ["industry_id"], name: "index_companies_on_industry_id"
   end
