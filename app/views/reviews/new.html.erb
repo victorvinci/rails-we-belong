@@ -10,7 +10,7 @@
         <div class="errors-container">
           <ul>
             <% @review.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+           <!--  <li><%= message %></li> -->
             <% end %>
           </ul>
         </div>
@@ -19,7 +19,7 @@
 
         <%= f.input :user_area, label: "Sua área ou departamento mais recente nesta empresa:" %>
         <%= f.input :user_position, label: "Sua posição ou cargo mais recente nesta empresa:" %>
-        <%= f.input :content, label: "Fale aqui sobre como esta empresa trata o assunto Diversidade e Inclusão no dia-a-dia:", placeholder: "Escreva pontos positivos e a melhorar e deixe suas recomendações aos líderes dessa empresa.", input_html: { minlength: 40 }, alert: "Seu comentário deve conter ao menos 40 caracteres." %>
+        <%= f.input :content, label: "Fale aqui sobre como esta empresa trata o assunto Diversidade e Inclusão no dia-a-dia:", placeholder: "Escreva pontos positivos e a melhorar e deixe suas recomendações aos líderes dessa empresa." %>
         <p style="font-size: 10px; margin-top: -16px;">Reservamo-nos ao direito de excluir comentários desagragadores ou que estejam de desacordo com os valores da WeBelong.</p>
         <%= f.simple_fields_for :answer do |a| %>
 

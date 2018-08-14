@@ -7,6 +7,8 @@ class Review < ApplicationRecord
   accepts_nested_attributes_for :answer
   after_create :calculate_weighting
 
+  validates :content, length: { minimum: 40, too_short: ": Este conteúdo deve ter mais de 40 caracteres."}
+
   pg_search_scope :search,
       against: [ :content ],
       # associated_against: {
