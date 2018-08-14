@@ -1,85 +1,50 @@
+.steps-wrapper .steps-title {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2% 0 0 0;
+  width: 80%;
+}
+
 .steps {
-  /* autoprefixer: off */
-  background: $professionalpurple;
-  color: $friendlyorange;
   display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  max-width: 100vw;
-  padding: 80px;
-  margin: 32px;
-  font-size: 120px;
-  grid-gap: 56px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 80%;
+  padding: 2%;
+  margin: 0 auto;
+  grid-gap: 1rem;
+  border-bottom: 1px dotted lightgrey;
 
-    .step-one  h3  {
-      font-size: 32px !important;
+  h4 {
+    margin: 0;
+  }
+}
 
-      grid-column: 1 / 1;
-      grid-row: 1 / 1;
-      }
+.step-one {
+  font-size: 2rem;
+  padding: 10px;
+}
 
-    .step-one .icon_home {
-        font-size: 120px;
-        grid-column: 2 / 1;
-        grid-row: 1 / 1;
-      }
+.icon-home-one {
+  font-size: 5rem;
+}
 
-    .step-one h5 {
-        font-size: 24px !important;
+.step-two {
+  font-size: 2rem;
+  padding: 10px;
+}
 
-        width: 100%;
+.icon-home-two {
+  font-size: 5rem;
+}
 
-        grid-column: 3 / 1;
-        grid-row:   1 / 1;
-      }
+.step-three {
+  padding: 10px;
+  font-size: 2rem;
+}
 
-    .step-two h3 {
-
-        font-size: 32px !important;
-
-        grid-column: 1 / 1;
-        grid-row: 2 / 1;
-      }
-
-    .step-two .icon_home {
-        font-size: 120px;
-        grid-column: 2 / 1;
-        grid-row: 2 / 1;
-      }
-
-    .step-two h5 {
-      font-size: 24px !important;
-
-      width: 100%;
-
-      grid-column: 3 / 1;
-      grid-row: 2 / 1;
-      }
-
-      .step-three h3 {
-      font-size: 32px !important;
-
-      grid-column: 1 / 1;
-      grid-row: 3 / 1;
-      }
-
-      .step-three .icon_home {
-      font-size: 120px;
-      grid-column: 2 / 1;
-      grid-row: 3 /1;
-      }
-
-      .step-three h5 {
-      font-size: 24px;
-
-      width: 100%;
-
-      grid-column: 3 / 1;
-      grid-row: 3 / 1;
-      }
- }
-
-
+.icon-home-three {
+  font-size: 5rem;
+}
