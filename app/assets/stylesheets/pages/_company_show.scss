@@ -82,4 +82,11 @@
   .company-profile {
     display: block;
   }
+  .company {
+    width: auto;
+  }
+  .company-profile .graph-container {
+  border: solid 1px grey;
+  margin: 15px;
+ }
 }
