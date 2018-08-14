@@ -61,6 +61,7 @@ class ReviewsController < ApplicationController
     @review.company.answer_3_average_score = @review.company.answer_3_total_score / @review.company.reviews.length
     @review.company.answer_4_average_score = @review.company.answer_4_total_score / @review.company.reviews.length
     @review.company.answer_5_average_score = @review.company.answer_5_total_score / @review.company.reviews.length
+    @review.company.final_rating = (@review.company.answer_1_average_score + @review.company.answer_2_average_score + @review.company.answer_3_average_score + @review.company.answer_4_average_score + @review.company.answer_5_average_score) / 5
     @review.company.save
   end
 
