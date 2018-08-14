@@ -4,8 +4,6 @@ class ReviewsController < ApplicationController
   before_action :set_company
 
   def new
-
-    # redirect_to new_employee_profile_path unless current_user.has_profile?
     @review = Review.new
     @review.build_answer
     @review.user = current_user
@@ -22,6 +20,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     authorize @review
     @review.company = Company.find(params[:company_id])
+    minority? ? @review.weighting = 130 : @review.weighting = 100
     if @review.save
       update_associated_company_score
       redirect_to company_path(@review.company),
@@ -61,16 +60,27 @@ class ReviewsController < ApplicationController
     @review.company.answer_3_average_score = @review.company.answer_3_total_score / @review.company.reviews.length
     @review.company.answer_4_average_score = @review.company.answer_4_total_score / @review.company.reviews.length
     @review.company.answer_5_average_score = @review.company.answer_5_total_score / @review.company.reviews.length
+    @review.company.final_rating = (@review.company.answer_1_average_score + @review.company.answer_2_average_score + @review.company.answer_3_average_score + @review.company.answer_4_average_score + @review.company.answer_5_average_score) / 5
     @review.company.save
   end
 
   def review_params
-    params.require(:review).permit(:user_position, :user_area, :content, answer_attributes: [:answer_1, :answer_2, :answer_3, :answer_4, :answer_5, :minority])
+    params.require(:review).permit(:user_position, :user_area, :content, answer_attributes: [:answer_1, :answer_2, :answer_3, :answer_4, :answer_5])
   end
 
   def not_yet_reviewed?
      @company = Company.find(params[:company_id])
      @company.reviews.where(user_id: @user).empty?
+  end
+
+  def minority?
+    if @user.employee_profile.sex.downcase == "homem" && @user.employee_profile.sexual_orientation.downcase == "heterossexual" && @user.employee_profile.ethnicity.downcase == "branco" && @user.employee_profile.gender_identity == "homem cis" && @user.employee_profile.disability.downcase == "não"
+      return false
+    end
+    if @user.employee_profile.sex.downcase == "não quero declarar" && @user.employee_profile.sexual_orientation.downcase == "não quero declarar" && @user.employee_profile.ethnicity.downcase == "não quero declarar" && @user.employee_profile.gender_identity == "não quero declarar" && @user.employee_profile.disability.downcase == "não quero declarar"
+      return false
+    end
+    true
   end
 
 end
