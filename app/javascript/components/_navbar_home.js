@@ -1,3 +1,4 @@
+
 function initUpdateNavbarOnScroll() {
 
   const navbar = document.querySelector('.navbar-wb');
