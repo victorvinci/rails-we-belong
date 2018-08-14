@@ -21,10 +21,10 @@
         </div>
 
         <p class="rating-user">
-          <% (result.final_rating / 20).times do %>
+          <% (result.company.final_rating / 20).times do %>
             <i class="fas fa-star"></i>
           <% end %>
-          <% if (result.final_rating / 20) > 0 %>
+          <% if (result.company.final_rating % 20) > 0 %>
             <i class="fas fa-star-half"></i>
           <% end %>
         </p>

@@ -22,14 +22,12 @@
         <%= f.input :content, label: "Fale aqui sobre como esta empresa trata o assunto Diversidade e Inclusão no dia-a-dia:", placeholder: "Escreva pontos positivos e a melhorar e deixe suas recomendações aos líderes dessa empresa." %>
         <p style="font-size: 10px; margin-top: -16px;">Reservamo-nos ao direito de excluir comentários desagragadores ou que estejam de desacordo com os valores da WeBelong.</p>
         <%= f.simple_fields_for :answer do |a| %>
-
-        <% collection = [['Não se aplica ou Não gostaria de avaliar', '3'], ['Discordo Fortemente', '1'], ['Discordo', '2'], ['Não Concordo nem Discordo', '3'], ['Concordo', '4'], ['Concordo Fortemente', '5']] %>
-        <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade do local onde ela está localizada?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
-        <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que refletem a realidade do local onde ela está localizada?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
-        <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
-        <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
-        <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
-        <%= a.input :minority, as: :radio_buttons, collection: [["Yes", true], ["No", false]], label: "Você se considera parte de uma minoria?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
+          <% collection = [['Não se aplica ou Não gostaria de avaliar', '3'], ['Discordo Fortemente', '1'], ['Discordo', '2'], ['Não Concordo nem Discordo', '3'], ['Concordo', '4'], ['Concordo Fortemente', '5']] %>
+          <%= a.input :answer_1, collection: collection, label: "Sua empresa tem um quadro de funcionários diversos que reflete a realidade do local onde ela está localizada?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
+          <%= a.input :answer_2, collection: collection, label: "Sua empresa tem pessoas no quadro de líderes (com poder de decisão) que refletem a realidade do local onde ela está localizada?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
+          <%= a.input :answer_3, collection: collection, label: "Seu ambiente de trabalho é seguro para que você seja quem você realmente é?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
+          <%= a.input :answer_4, collection: collection, label: "Sua empresa lhe acolhe e respeita, independente das suas características ou convicções pessoais?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
+          <%= a.input :answer_5, collection: collection, label: "Sua empresa lhe oferece oportunidades (promoções, desenvolvimento, feedbacks...), independente das suas características pessoais?", selected: 'Não se aplica ou Não gostaria de avaliar' %>
         <% end  %>
         <%= f.button :submit, "Criar Review" %>
         <% end %>
