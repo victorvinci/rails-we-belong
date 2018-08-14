@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_14_132042) do
+
+ActiveRecord::Schema.define(version: 2018_08_14_135116) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -53,7 +55,11 @@ ActiveRecord::Schema.define(version: 2018_08_14_132042) do
     t.integer "answer_4_average_score"
     t.integer "answer_5_total_score"
     t.integer "answer_5_average_score"
+
+    t.string "logo_url"
+
     t.integer "final_rating"
+
     t.index ["industry_id"], name: "index_companies_on_industry_id"
   end
 
@@ -114,6 +120,8 @@ ActiveRecord::Schema.define(version: 2018_08_14_132042) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "role"
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
