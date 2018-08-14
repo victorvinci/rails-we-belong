@@ -23,7 +23,8 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.company = Company.find(params[:company_id])
     if @review.save
-      update_associated_company_score redirect_to company_path(@review.company),
+      update_associated_company_score
+      redirect_to company_path(@review.company),
       notice: 'Review criado com sucesso.'
     else
       render :new
