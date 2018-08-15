@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :role, inclusion: { in: %w(employee representative),
     message: "%{value} is not a valid role type" }, allow_nil: true
 
+  validates :terms_of_service, acceptance: true
+
   after_create :send_welcome_email
 
   def self.from_omniauth(auth)
