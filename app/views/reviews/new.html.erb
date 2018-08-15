@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <div class="review-form">
-        <h4>Nova avaliação para:</h4> <h3><%= @company.name %></h3>
+        <h4>Nova avaliação para:</h4> <h3 class="title-text"><%= @company.name %></h3>
 
         <br>
         <%= simple_form_for [@company, @review] do |f| %>

@@ -21,7 +21,7 @@
           <i class="glyphicon glyphicon-search"></i>
         </button>
       </span>
-        <%= text_field_tag :query, params[:query], placeholder: "Procure aqui por empresa ou tema de seu interesse", style: "font-size: 12px;" %>
+        <%= text_field_tag :query, params[:query], placeholder: "Busque por empresa ou tema de seu interesse", style: "font-size: 12px;" %>
        <% end %>
     </div>
   </div>
@@ -46,7 +46,7 @@
 
         <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
-            <li><a href="/users/edit">My Profile</a></li>
+            <li><a href="/users/edit"><%= current_user.email %></a></li>
             <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
           <% else %>
             <li><a data-method="get" href="/users/sign_in">Log In</a></li>
@@ -79,11 +79,11 @@
           </div>
 
         <% if user_signed_in? %>
-
-            <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
-          <% else %>
-            <li><a data-method="get" href="/users/sign_in">Log In</a></li>
-          <% end %>
+          <li><a href="/users/edit"><%= current_user.email %></a></li>
+          <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
+        <% else %>
+          <li><a data-method="get" href="/users/sign_in">Log In</a></li>
+        <% end %>
       </ul>
     </div>
   </div>
