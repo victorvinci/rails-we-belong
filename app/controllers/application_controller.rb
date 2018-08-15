@@ -23,6 +23,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update, keys: [employee_profile_attributes: [:sex]])
+   # devise_parameter_sanitizer.permit(:account_update, keys: [:terms_of_service, employee_profile_attributes: [:sex]])
+    devise_parameter_sanitizer.permit(:account_update) do |user_params|
+      user_params.permit({ terms_of_service: [] }, :email, :password, :password_confirmation)
+    end
   end
 end
