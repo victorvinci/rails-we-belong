@@ -32,23 +32,19 @@
   <div class="navbar-wb-right hidden-xs hidden-sm">
     <!--       links navbar -->
 
-  <%= link_to 'Termos de Uso', '/disclaimer', id: 'linkone', class: home_class_for_navbar %>
-  <%= link_to 'Sobre a WeBelong', '/about', id: 'linktwo', class: home_class_for_navbar %>
+  <%= link_to 'Termos de Uso', '/disclaimer', id: 'linkone', class: home_class_for_navbar('navbar-wb-item navbar-wb-link') %>
+  <%= link_to 'Sobre a WeBelong', '/about', id: 'linktwo', class: home_class_for_navbar('navbar-wb-item navbar-wb-link') %>
 
  <!--    fim links navbar -->
 
  <!-- dropdown with avatar -->
     <div class="navbar-wb-item">
       <div class="dropdown">
-       <!--  <img src="https://avatars1.githubusercontent.com/u/38114468?v=4" class="avatar dropdown-toggle" id="navbar-wb-menu" data-toggle="dropdown"> -->
+        <!--  <img src="https://avatars1.githubusercontent.com/u/38114468?v=4" class="avatar dropdown-toggle" id="navbar-wb-menu" data-toggle="dropdown"> -->
 
-       <% if !user_signed_in? %>
-         <i class="fas fa-user avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
-       <% else %>
-          <i class="fas fa-user avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
-       <% end %>
+        <%= content_tag :i, nil, id: 'navbar-wagon-menu', class: home_class_for_navbar('fas fa-user avatar dropdown-toggle'), data: { toggle: 'dropdown' } %>
 
-          <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
           <% if user_signed_in? %>
             <li><a href="/users/edit">My Profile</a></li>
             <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
