@@ -9,7 +9,7 @@ class EmployeeProfilePolicy < ApplicationPolicy
   end
 
   def update?
-    employee?
+    true
   end
 
   def edit?
@@ -23,7 +23,7 @@ class EmployeeProfilePolicy < ApplicationPolicy
   private
 
   def employee?
-    !current_user.role.nil?
+    @user.employee_profile.nil?
   end
 
   class Scope < Scope

@@ -6,11 +6,12 @@ Rails.application.routes.draw do
       }
   root to: 'pages#home'
   get '/about', to: 'pages#about'
+  get '/disclaimer', to: 'pages#disclaimer'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :companies, only: %i[index show] do
     resources :reviews, only: %i[index new create] do
       resources :answers, only: %i[show new create]
-      resources :votes, only: %i[show new create]
+      resources :votes, only: :create
     end
   end
   resources :reviews, only: :show do
