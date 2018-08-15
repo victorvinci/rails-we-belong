@@ -1,9 +1,9 @@
 
 <div class="header-results" style="text-align: center; margin: 0;"><h2>Veja aqui algumas empresas avaliadas</h2></div>
 
-<ul style="padding: 0;">
+<ul class="kf-slider" style="padding: 0;">
     <% @companies.each do |result| %>
-      <li class="container-cards">
+      <li class="container-cards v-center">
 
           <h2 class="link-result"><%= link_to result.name, company_path(result) %></h2>
 
