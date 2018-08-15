@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Drop db on re-seed
+require 'csv'
+require "open-uri"
+require "yaml"
+
 EmployeeProfile.destroy_all
 p "Destroying votes"
 Vote.destroy_all
@@ -26,20 +30,52 @@ p "Users dropped"
 p "Reticulating splines"
 
 
-80.times do
-  p "creating industry"
-  industry = Industry.new(
-  name: Faker::Company.industry
-  )
-  industry.save!
+# 80.times do
+#   p "creating industry"
+#   industry = Industry.new(
+#   name: Faker::Company.industry
+#   )
+#   industry.save!
+# end
+# 80.times do
+#   p "creating company"
+#   company = Company.new(
+#     name: Faker::Company.name,
+#     description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph}",
+#     industry: Industry.all.sample
+#   )
+#   company.save!
+# end
+
+
+industries_file = YAML.load_file('db/industries.yml')
+
+puts "Creating Industries..."
+
+industries_file["industries"].each do |name|
+  Industry.create! name
 end
-80.times do
-  p "creating company"
-  company = Company.new(
-    name: Faker::Company.name,
-    description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph}",
-    industry: Industry.all.sample
-  )
-  company.save!
+
+puts "Industries created"
+
+puts "Creating companies"
+
+csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+num = 1
+
+while num < 27 do
+  filepath    = "db/csvs/companies#{num}.csv"
+  CSV.foreach(filepath, csv_options) do |row|
+    name = row['name']
+    puts name
+    description = row['description']
+    logo_url = row['logo-src']
+    industry = Industry.find_by(name: "Não disponível")
+    new_company = Company.new(name: name, description: description, logo_url: logo_url, industry: industry)
+    new_company.save! unless Company.find_by(name: new_company.name)
+  end
+  num += 1
 end
+p "Companies created!"
+
 
