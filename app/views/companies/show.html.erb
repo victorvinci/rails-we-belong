@@ -1,11 +1,31 @@
-<body>
-<div style="height:70px;"></div>
-<div class="container">
-  <h1 class="company"><%= @company.name %></h1>
+<div class="alert"></div>
+
+<div class="container-detail">
+  <div class="company">
+    <h1 class="company-logo">
+      <% if (!@company.logo_url.nil?) %>
+        <img src="<%= @company.logo_url %>" alt="">
+      <% else %>
+        <i class="far fa-building"></i>
+      <% end %>
+    </h1>
+
+    <h2><%= @company.name %></h2>
+
+    <p class="rating-company-detail">
+          <% (@company.final_rating / 20).times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% if (@company.final_rating % 20) > 0 %>
+            <i class="fas fa-star-half"></i>
+          <% end %>
+        </p>
+  </div>
+
     <div class="company-profile">
 
       <div class="company-blurb">
-        <h4 class="central-title"><mark>About <%= @company.name %></mark></h4>
+        <h4 class="central-title">Sobre</h4>
         <p><%= @company.description %></p>
       </div>
         <% if @company.reviews.empty? %>
@@ -19,20 +39,29 @@
           <%= render 'graph' %>
         <% end %>
       <div class="reviews">
-        <h4 class="central-title"><mark>Reviews</mark></h4>
-        <% if @company.reviews.where(user_id: current_user).empty? %>
-          <%= link_to new_company_review_path(@company) do %>
-            <i class="far fa-edit" style="padding-top: 15px;"></i> Faça sua própria avaliação
+        <h4 class="central-title">Avaliações</h4>
+           <% if @company.reviews.where(user_id: current_user).empty? %>
+            <%= link_to new_company_review_path(@company) do %>
+              <i class="far fa-edit" style="padding-top: 15px;"></i> Faça sua própria avaliação
+            <% end %>
           <% end %>
-        <% end %>
 
-
+      <ul>
         <% @reviews.each do |review| %>
-        <div class="review">
+        <li class="review">
+          <h2 class="message-title" style="color: #469AE0; padding: 5px 0;"><em><%= review.user_position %></em> na área <em><%= review.user_area %></em>.</h2>
 
-          <p><%= review.content %></p>
+          <p class="rating-user">
+            <% (review.company.final_rating / 20).times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <% if (review.company.final_rating % 20) > 0 %>
+              <i class="fas fa-star-half"></i>
+            <% end %>
+          </p>
 
-          <p id="review-details"><%= review.user_position %> || <%= review.user_area %> ||Score: <%= review.weighting  %></p>
+          <p style="margin: 10px 0 10px 0; padding: 10px; border-left: 1px solid lightgrey; border-top: 1px solid lightgrey;"><%= review.content %></p>
+
           <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
           method: 'post', remote: true do%>
             <% if review.votes.where(user_id: current_user).first.nil? %>
@@ -49,9 +78,11 @@
               <i class="<%= review.votes.where(user_id: current_user).first.vote_type == 'downvote' ? "fas fa-thumbs-down vote downvote" : "far fa-thumbs-down vote downvote" %>" id="downvote"></i>
             <% end %>
           <% end  %>
-        </div>
+        </li>
         <% end %>
+      </ul>
       </div>
     </div>
+  </div>
 </div>
-</body>
+
