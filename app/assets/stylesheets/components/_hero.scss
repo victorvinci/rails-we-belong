@@ -19,7 +19,7 @@
   background: white;
   grid-column: 3;
   grid-row: 2 / 3;
-  width: 100%;
+  width: 110%;
   height: 120%;
   z-index: 0;
   -webkit-filter: brightness;
@@ -34,7 +34,7 @@
   background: $friendlyorange;
   grid-column: 3;
   grid-row: 2 / 3;
-  width: 100%;
+  width: 110%;
   height: 120%;
   z-index: 1;
   -webkit-filter: brightness;
@@ -50,7 +50,7 @@
   background: $warmred;
   grid-column: 3;
   grid-row: 2 / 3;
-  width: 100%;
+  width: 110%;
   height: 120%;
   z-index: 1;
   -webkit-filter: brightness;
@@ -64,20 +64,21 @@
 
  .title-banner {
   /* text-align: left; */
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  font-family: "Special Elite";
   grid-column: 3 / 4;
   grid-row: 2;
   font-size: calc(3rem + 4vw);
   /* margin-top: 1rem; */
   /* margin-right: 1rem; */
-  width: 95%;
+  width: 110%;
   z-index: 2;
   /* height: 100%; */
   /* max-height: 100px; */
   align-self: end;
-  justify-self: first baseline;
-  margin: 0;
-  padding: 0;
+  // justify-self: start;
+  margin: 5px 0 0 0;
+  padding: 2rem;
   word-wrap: break-word;
 }
 
@@ -96,24 +97,31 @@
 }
 
  .slogan {
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  // font-family: 'Annie Use Your Telescope', cursive;
+// font-family: 'Delius', cursive;
+  font-family: 'Pangolin', cursive;
+// font-family: 'Just Me Again Down Here', cursive;
   grid-column: 3 / 3;
   grid-row: 3 / 4;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1.25rem + 0.5vw);
   /* margin-left: 1rem; */
   /* margin-right: 1rem; */
   width: 80%;
   z-index: 2;
   /* height: 100%; */
-  padding: 1% 0 0 0%;
+  padding: 0 2% 0 0%;
   /* max-height: 100px; */
-  align-self: first baseline;
-  justify-self: baseline;
-  margin: 0;
-  font-weight: lighter;
+  align-self: baseline;
+  justify-self: center;
+  margin: 0 -2rem;
+  // font-weight: bold;
   border-top: 1px dotted white;
   /* max-width: 205px; */
 }
+
+// font-family: 'Special Elite', cursive;
+
 
   #carousel-example-generic {
   background-size: cover;
