@@ -9,7 +9,7 @@ class ProductsTest < ApplicationSystemTestCase
     visit "/searches/index?utf8=✓&query=clark"
     assert_selector "a", text: "Clark Solutions"
   end
-   test "lets a signed in user create a new product" do
+   test "lets a signed in user create a review" do
     company = Company.first
     login_as users(:george)
     visit "/companies/#{company.id}/reviews/new"
@@ -24,7 +24,7 @@ class ProductsTest < ApplicationSystemTestCase
     # save_and_open_screenshot
 
     # Should be redirected to Home with new product
-    assert_equal "/companies/#{company.id}/reviews", page.current_path
+    assert_equal "/companies/#{company.id}", page.current_path
     assert_text "Change your life: Learn to code"
   end
 end
