@@ -72,12 +72,12 @@ outline: none;
 }
 
 .navbar-wb-link-hiden {
-  color: white;
+  color: white !important;
   font-size: 14px;
   opacity: 0.8;
 }
 .navbar-wb-link-hiden:hover {
-  color: $friendlyorange;
+  color: $friendlyorange !important;
   text-decoration: none;
   opacity: 1;
 }
