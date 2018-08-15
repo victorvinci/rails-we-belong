@@ -74,6 +74,7 @@ class ReviewsController < ApplicationController
   end
 
   def minority?
+    return false if @user.employee_profile.nil?
     if @user.employee_profile.sex.downcase == "homem" && @user.employee_profile.sexual_orientation.downcase == "heterossexual" && @user.employee_profile.ethnicity.downcase == "branco" && @user.employee_profile.gender_identity == "homem cis" && @user.employee_profile.disability.downcase == "não"
       return false
     end
