@@ -11,10 +11,7 @@
             <div class="form-inputs">
               <%= f.input :email, required: true, autofocus: true %>
               <%= f.input :password, label: 'Senha', required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-              <%= f.input :password_confirmation, label: 'Confirmar senha', required: true %>
             </div>
-
-            <%= render "employee_profiles/form" %>
 
             <div class="form-actions">
               <%= f.button :submit, "Cadastrar", class: "button button-w bg-1 button--border-thin button--round-s" %>

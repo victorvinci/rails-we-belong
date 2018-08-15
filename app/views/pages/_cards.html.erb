@@ -1,21 +1,15 @@
-<section class="container-results">
-
-  <div class="header-results">
-    <h1> <%= @companies.size %> resultados para <strong><%= params[:query] %></strong> em Empresas:</h1>
-    <!-- <p>Total Results: X</p> -->
-  </div>
-
-  <ul>
+<div class="container homecards">
+<ul>
     <% @companies.each do |result| %>
-      <li class="container-cards">
+      <li class="container-homecards">
 
-          <h2 class="link-result"><%= link_to result.pg_search_highlight.html_safe, company_path(result) %></h2>
+          <h2 class="link-result"><%= link_to result.name, company_path(result) %></h2>
 
           <i class="avatar-company far fa-building"></i>
 
           <p class="total-reviews"><%= result.reviews.count %> avaliações</p>
 
-        <p class="rating-company">
+        <p class="rating-user">
           <% (result.final_rating / 20).times do %>
             <i class="fas fa-star"></i>
           <% end %>
@@ -27,6 +21,4 @@
       </li>
     <% end %>
   </ul>
-
-<%= paginate @companies %>
-</section>
+</div>
