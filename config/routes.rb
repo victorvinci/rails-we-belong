@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :companies, only: %i[index show] do
     resources :reviews, only: %i[index new create] do
       resources :answers, only: %i[show new create]
-      resources :votes, only: %i[show new create]
+      resources :votes, only: :create
     end
   end
   resources :reviews, only: :show do
