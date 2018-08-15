@@ -1,23 +1,23 @@
 <section class="container-results">
 
-  <div class="header-results">
-    <h1> Resultados para <strong><%= params[:query] %></strong> em Avaliações:</h1>
-    <p>Total Results: X</p>
+  <div class="header-results" style="border-bottom: 5px solid #E59584;">
+    <h1> <%= @results.size %> resultado(s) para <strong><%= params[:query] %></strong> em Avaliações:</h1>
   </div>
 
   <ul>
     <% @results.each do |result| %>
-      <li class="container-cards">
+      <li class="container-cards" style="box-shadow: 2px 2px 1px #469AE0;">
 
         <i class="avatar-result-user fa fa-user"></i>
 
-        <h2 class="message-title">Titulo Review</h2>
+        <h2 class="message-title" style="color: #469AE0;"><em><%= result.user_position %></em> na área <em><%= result.user_area %></em>.</h2>
 
         <div class="message-body">
 
-        <p class="user-review"><%= result.pg_search_highlight.html_safe %></p>
+          <p class="user-review"><%= result.pg_search_highlight.html_safe %></p>
 
-        <p class="created-at"> <%= link_to "View More", company_path(result.company_id) %></p>
+          <p class="created-at"> <%= link_to "Veja Mais", company_path(result.company_id) %></p>
+
         </div>
 
         <p class="rating-user">
