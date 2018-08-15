@@ -28,9 +28,16 @@
         <h4 class="central-title">Sobre</h4>
         <p><%= @company.description %></p>
       </div>
-
-        <%= render 'graph' %>
-
+        <% if @company.reviews.empty? %>
+          <div class="graph-container">
+            <dl>
+              <dt>Avaliações</dt>
+              <p>Esta empresa ainda não tem avaliações</p>
+            </dl>
+          </div>
+        <% else %>
+          <%= render 'graph' %>
+        <% end %>
       <div class="reviews">
         <h4 class="central-title">Avaliações</h4>
            <% if @company.reviews.where(user_id: current_user).empty? %>
