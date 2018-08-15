@@ -6,7 +6,7 @@
   <!-- use nav instead of div for navbar - html 5 -->
   <!-- logo -->
 
-  <a href="/" class="navbar-wb-brand fas fa-users">
+  <a href="/"> <%= image_tag "logoprovisorio.png", class:"logohome" %>
     </a>
   <!-- fim logo -->
 
@@ -31,8 +31,10 @@
   <!-- Align right -->
   <div class="navbar-wb-right hidden-xs hidden-sm">
     <!--       links navbar -->
-    <a href="/disclaimer" class="navbar-wb-item navbar-wb-link">Termos de Uso</a>
-    <a href="/about" class="navbar-wb-item navbar-wb-link">Sobre a WeBelong</a>
+
+  <%= link_to 'Termos de Uso', '/disclaimer', id: 'linkone', class: home_class_for_navbar %>
+  <%= link_to 'Sobre a WeBelong', '/about', id: 'linktwo', class: home_class_for_navbar %>
+
  <!--    fim links navbar -->
 
  <!-- dropdown with avatar -->
@@ -79,12 +81,9 @@
               </span>
             </div>
           </div>
-        </li>
-        <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 1</a></li>
-        <li><a href="#" class="navbar-wb-item navbar-wb-link">LINK 2</a></li>
+
         <% if user_signed_in? %>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
+
             <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
           <% else %>
             <li><a data-method="get" href="/users/sign_in">Log In</a></li>
