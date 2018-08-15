@@ -14,11 +14,11 @@
   width: 80%;
   padding: 2%;
   margin: 0 auto;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   border-bottom: 1px dotted lightgrey;
 
   h4 {
-    margin: 0;
+    margin: 32px 0 0 0;
   }
 }
 
@@ -29,6 +29,7 @@
 
 .icon-home-one {
   font-size: 5rem;
+  color: $professionalpurple;
 }
 
 .step-two {
@@ -38,6 +39,7 @@
 
 .icon-home-two {
   font-size: 5rem;
+  color: $friendlyorange;
 }
 
 .step-three {
@@ -47,4 +49,5 @@
 
 .icon-home-three {
   font-size: 5rem;
+  color: $warmred;
 }
