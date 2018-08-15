@@ -6,10 +6,10 @@ class Review < ApplicationRecord
   has_many :votes
   accepts_nested_attributes_for :answer
 
-  validates :content, length: { minimum: 40, too_short: ": Este conteúdo deve ter mais de 40 caracteres."}
+  validates :content, length: { minimum: 40, too_short: ": Este conteúdo deve ter mais de 40 caracteres." }
 
   pg_search_scope :search,
-      against: [ :content ],
+      against: [:content],
       # associated_against: {
       #   company: [ :name ]
       # },
