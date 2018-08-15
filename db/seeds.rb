@@ -67,7 +67,6 @@ while num < 27 do
   filepath    = "db/csvs/companies#{num}.csv"
   CSV.foreach(filepath, csv_options) do |row|
     name = row['name']
-    puts name
     description = row['description']
     logo_url = row['logo-src']
     industry = Industry.find_by(name: "Não disponível")
