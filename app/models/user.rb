@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, omniauth_providers: %i[linkedin facebook]
+         :omniauthable, omniauth_providers: %i[linkedin]
 
 
   has_many :reviews
@@ -27,8 +27,8 @@ class User < ApplicationRecord
     super.tap do |user|
       if data = session["devise.linkedin_data"] && session["devise.linkedin_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
-      elsif data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        user.email = data["email"] if user.email.blank?
+      # elsif data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+      #   user.email = data["email"] if user.email.blank?
       end
     end
   end
