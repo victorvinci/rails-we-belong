@@ -1,7 +1,9 @@
-<div class="container homecards">
-<ul>
+
+<div class="header-results" style="text-align: center; margin: 0;"><h2>Veja aqui algumas empresas avaliadas</h2></div>
+
+<ul style="padding: 0;">
     <% @companies.each do |result| %>
-      <li class="container-homecards">
+      <li class="container-cards">
 
           <h2 class="link-result"><%= link_to result.name, company_path(result) %></h2>
 
@@ -9,7 +11,7 @@
 
           <p class="total-reviews"><%= result.reviews.count %> avaliações</p>
 
-        <p class="rating-user">
+        <p class="rating-company">
           <% (result.final_rating / 20).times do %>
             <i class="fas fa-star"></i>
           <% end %>
@@ -20,5 +22,5 @@
 
       </li>
     <% end %>
+
   </ul>
-</div>
