@@ -1,13 +1,19 @@
 
 <div class="header-results" style="text-align: center; margin: 0;"><h2>Veja aqui algumas empresas avaliadas</h2></div>
 
-<ul class="kf-slider" style="padding: 0;">
+<ul class="kf-slider">
     <% @companies.each do |result| %>
-      <li class="container-cards v-center" style="width: 100%; margin: 5px auto; padding: 5px;">
+      <li class="container-cards v-center">
 
-          <h2 class="link-result"><%= link_to result.name, company_path(result) %></h2>
+          <h2 class="link-result" style="overflow: hidden;"><%= link_to result.name, company_path(result) %></h2>
 
-          <i class="avatar-company far fa-building"></i>
+        <div class="avatar-company">
+            <% if (!result.logo_url.nil?) %>
+              <img src="<%= result.logo_url %>" alt="">
+            <% else %>
+              <i class="far fa-building"></i>
+            <% end %>
+          </div>
 
           <p class="total-reviews"><%= result.reviews.count %> avaliações</p>
 

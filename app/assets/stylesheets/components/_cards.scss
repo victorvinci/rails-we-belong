@@ -9,7 +9,7 @@
 
 .container-results {
   display: grid;
-  max-width: 750px;
+  max-width: 800px;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   grid-template-rows: repeat(auto-fit, minmax(10%, 1fr));
@@ -39,14 +39,14 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr auto;
-  width: 90%;
   color: white;
-  border: 1px dotted black;
+  border: 1px dotted $professionalpurple;
   margin: 15px;
   padding: 10px;
-  background-color: $friendlyorange;
+  background-color: white;
   color: black;
   grid-gap: 0.5rem;
+  box-shadow: 2px 2px 1px $professionalpurple;
 
   a:hover {
     text-decoration: none;
@@ -63,6 +63,21 @@
   grid-row: 1 / 3;
   grid-column: 2 / 4;
   padding: 18px 0 0 10px;
+  width: 40ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 700px) {
+   width: 25ch; }
+
+   @media (max-width: 480px) {
+    width: 20ch;
+   }
+
+   @media (max-width: 400px) {
+    width: 12ch;
+   }
 }
 
 .avatar-company {
@@ -73,6 +88,12 @@
   grid-column: 1;
   align-self: center;
   padding: 10px 0 0 0;
+  img {
+    object-fit: cover;
+    border: 1px solid lightgrey;
+    max-width: 70px;
+    max-height: 70px;
+  }
 }
 
 .total-reviews {
@@ -87,7 +108,7 @@
 .rating-company {
   font-size: 16px;
   grid-column: 2 / 4;
-  grid-row: 3 / 4;
+  grid-row: 2 / 4;
   text-align: left;
   /* align-self: center; */
   margin: 0;

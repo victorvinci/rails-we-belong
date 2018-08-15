@@ -11,7 +11,13 @@
 
           <h2 class="link-result"><%= link_to result.pg_search_highlight.html_safe, company_path(result) %></h2>
 
-          <i class="avatar-company far fa-building"></i>
+          <div class="avatar-company">
+            <% if (!result.logo_url.nil?) %>
+              <img src="<%= result.logo_url %>" alt="">
+            <% else %>
+              <i class="far fa-building"></i>
+            <% end %>
+          </div>
 
           <p class="total-reviews"><%= result.reviews.count %> avaliações</p>
 
