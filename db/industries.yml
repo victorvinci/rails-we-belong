@@ -1,0 +1,149 @@
+industries:
+- name: Administração agrícola
+- name: Administração de serviços
+- name: Administração governamental
+- name: Agricultura
+- name: Alimentos e bebidas
+- name: Animação
+- name: Armazenagem
+- name: Arquitetura e planejamento
+- name: Arrecadação de recursos
+- name: Artes cênicas
+- name: Artes e artesanato
+- name: Atacado
+- name: Atendimento ao consumidor
+- name: Atendimento médico e hospitalar
+- name: Atendimento médico psiquiátrico
+- name: Atividades parlamentares
+- name: Automação industrial
+- name: Aviação e aeroespacial
+- name: Bancos
+- name: Bancos de investimento
+- name: Belas-artes
+- name: Bens de consumo
+- name: Bibliotecas
+- name: Biotecnologia
+- name: Capital de risco e participações privadas
+- name: Cinema e filmes
+- name: Comércio e desenvolvimento internacional
+- name: Composição e revisão de textos
+- name: Construção
+- name: Construção de ferrovia
+- name: Construção naval
+- name: Consultoria de gerenciamento
+- name: Contabilidade
+- name: Cosmética
+- name: Defesa e espaço
+- name: Desenvolvimento de programas
+- name: Design
+- name: Design gráfico
+- name: Dispositivos médicos
+- name: Editoração
+- name: Educação à distância
+- name: Embalagens e recipientes
+- name: Engenharia civil
+- name: Engenharia mecânica ou industrial
+- name: Ensino fundamental/médio
+- name: Ensino superior
+- name: Entrega de encomendas e fretes
+- name: Entretenimento
+- name: Esportes
+- name: Execução da lei
+- name: Filantropia
+- name: Fotografia
+- name: Gabinete presidencial
+- name: Gestão de investimentos
+- name: Gestão de organização sem fins lucrativos
+- name: Gestão educacional
+- name: Hardware
+- name: Hotelaria
+- name: Imobiliário
+- name: Imóveis comerciais
+- name: Importação e exportação
+- name: Impressão
+- name: Indústria automotiva
+- name: Indústria farmacêutica
+- name: Indústria química
+- name: Indústria têxtil
+- name: Instalações e serviços de recreação
+- name: Instituições religiosas
+- name: Internet
+- name: Jogos de azar
+- name: Jogos de computador
+- name: Jornais
+- name: Judiciário
+- name: Laticínios
+- name: Lazer, viagens e turismo
+- name: Linhas aéreas/Aviação
+- name: Logística e cadeia de suprimentos
+- name: Manufatura de eletroeletrônicos
+- name: Maquinário
+- name: Marketing e publicidade
+- name: Materiais de construção
+- name: Materiais esportivos
+- name: Medicina alternativa
+- name: Mercados de capital
+- name: Mídia de difusão
+- name: Mídia online
+- name: Militar
+- name: Mineração e metais
+- name: Móveis
+- name: Museus e instituições
+- name: Música
+- name: Nanotecnologia
+- name: Não disponível
+- name: Organização cívica e social
+- name: Organização política
+- name: Organizações de pesquisa e orientação
+- name: Papel e produtos florestais
+- name: Pesca
+- name: Pesquisa
+- name: Pesquisa de mercado
+- name: Petróleo e energia
+- name: Plástico
+- name: Política pública
+- name: Prática jurídica
+- name: Prática médica
+- name: Produção de mídia
+- name: Produtos alimentícios
+- name: Produtos de luxo e joias
+- name: Produtos eletrônicos
+- name: Recrutamento e seleção
+- name: Recursos humanos
+- name: Recursos renováveis e meio ambiente
+- name: Redes
+- name: Rede sem fio
+- name: Relações governamentais
+- name: Relações internacionais
+- name: Relações públicas e comunicações
+- name: Resolução alternativa de litígios
+- name: Restaurantes
+- name: Roupas e moda
+- name: Saúde, bem-estar e educação física
+- name: Segurança de redes e computadores
+- name: Segurança e investigações
+- name: Segurança pública
+- name: Seguros
+- name: Semicondutores
+- name: Serviços ambientais
+- name: Serviços da informação
+- name: Serviços financeiros
+- name: Serviços individuais e familiares
+- name: Serviços jurídicos
+- name: Serviços para eventos
+- name: Serviços públicos
+- name: Software
+- name: Supermercados
+- name: Suprimentos e equipamentos comerciais
+- name: Tabaco
+- name: Tecnologia da informação e serviços
+- name: Telecomunicações
+- name: Terceirização e offshoring
+- name: Tradução e localização
+- name: Transporte/Caminhões/Trens
+- name: Transporte marítimo
+- name: Treinamento e orientação profissional
+- name: Varejo
+- name: Veterinária
+- name: Vidro, cerâmica e concreto
+- name: Vinhos e destilados
