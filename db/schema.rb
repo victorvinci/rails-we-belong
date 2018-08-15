@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 2018_08_14_135116) do
     t.integer "answer_4_average_score"
     t.integer "answer_5_total_score"
     t.integer "answer_5_average_score"
-    t.string "logo_url"
     t.integer "final_rating"
+    t.string "logo_url"
     t.index ["industry_id"], name: "index_companies_on_industry_id"
   end
 
