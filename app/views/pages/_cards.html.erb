@@ -3,7 +3,7 @@
 
 <ul class="kf-slider" style="padding: 0;">
     <% @companies.each do |result| %>
-      <li class="container-cards v-center">
+      <li class="container-cards v-center" style="width: 100%; margin: 5px auto; padding: 5px;">
 
           <h2 class="link-result"><%= link_to result.name, company_path(result) %></h2>
 
