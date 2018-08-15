@@ -5,32 +5,44 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  def new
+  # def new
+  #   @employee_profile = EmployeeProfile.new
+  #   @employee_profile.user = current_user
+  #   authorize @employee_profile
+  #   super
+  # end
+
+  # POST /resource
+  # def create
+  #   @employee_profile = EmployeeProfile.new(employee_profile_params)
+  #   authorize @employee_profile
+  #   super do |resource|
+  #     @employee_profile.user = resource
+  #     @employee_profile.save!
+  #   end
+  #   # if @employee_profile.save
+  #   #   super
+  #   # else
+  #   #   render :new
+  #   # end
+  # end
+
+  # GET /resource/edit
+  def edit
     @employee_profile = EmployeeProfile.new
     @employee_profile.user = current_user
     authorize @employee_profile
     super
   end
 
-  # POST /resource
-  def create
+  def update
     @employee_profile = EmployeeProfile.new(employee_profile_params)
     authorize @employee_profile
     super do |resource|
       @employee_profile.user = resource
       @employee_profile.save!
     end
-    # if @employee_profile.save
-    #   super
-    # else
-    #   render :new
-    # end
   end
-
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
 
   # PUT /resource
   # def update
