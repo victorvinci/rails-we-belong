@@ -6,7 +6,7 @@ class Company < ApplicationRecord
   after_create :set_default_scores
 
   pg_search_scope :search,
-      against: [ :name ],
+      against: [:name],
       :using => {
                   tsearch: {
                     prefix: true,

@@ -8,7 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.0'
 gem 'redis'
 gem 'postmark-rails'
-#gem to transform site in https
+# gem to transform site in https
 gem 'rack-ssl-enforcer'
 
 gem 'autoprefixer-rails'
@@ -39,7 +39,6 @@ gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
-
 end
 
 group :development, :test do
@@ -49,7 +48,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-  #test gems
+  # test gems
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'

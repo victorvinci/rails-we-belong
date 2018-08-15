@@ -14,7 +14,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-
   def create
     @review = Review.new(review_params)
     @review.user = current_user
@@ -75,13 +74,20 @@ class ReviewsController < ApplicationController
 
   def minority?
     return false if @user.employee_profile.nil?
-    if @user.employee_profile.sex.downcase == "homem" && @user.employee_profile.sexual_orientation.downcase == "heterossexual" && @user.employee_profile.ethnicity.downcase == "branco" && @user.employee_profile.gender_identity == "homem cis" && @user.employee_profile.disability.downcase == "não"
+    if @user.employee_profile.sex.downcase == "homem" &&
+      @user.employee_profile.sexual_orientation.downcase == "heterossexual" &&
+      @user.employee_profile.ethnicity.downcase == "branco" &&
+      @user.employee_profile.gender_identity == "homem cis" &&
+      @user.employee_profile.disability.downcase == "no"
       return false
     end
-    if @user.employee_profile.sex.downcase == "não quero declarar" && @user.employee_profile.sexual_orientation.downcase == "não quero declarar" && @user.employee_profile.ethnicity.downcase == "não quero declarar" && @user.employee_profile.gender_identity == "não quero declarar" && @user.employee_profile.disability.downcase == "não quero declarar"
+    if @user.employee_profile.sex == "No" &&
+        @user.employee_profile.sexual_orientation == "No" &&
+        @user.employee_profile.ethnicity == "No" &&
+        @user.employee_profile.gender_identity == "No" &&
+        @user.employee_profile.disability == "No"
       return false
     end
     true
   end
-
 end
