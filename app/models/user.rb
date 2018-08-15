@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[linkedin]
 
 
-  has_many :reviews
+  has_many :reviews, dependent: :nullify
 
   has_one :employee_profile
   accepts_nested_attributes_for :employee_profile
