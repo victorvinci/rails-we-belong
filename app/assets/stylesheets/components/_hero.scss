@@ -31,7 +31,7 @@
 }
 
  .background-yellow {
-  background: $friendlyorange;
+  background: $warmred;
   grid-column: 3;
   grid-row: 2 / 3;
   width: 110%;
@@ -47,7 +47,7 @@
 }
 
  .background-red {
-  background: $warmred;
+  background: $friendlyorange;
   grid-column: 3;
   grid-row: 2 / 3;
   width: 110%;
