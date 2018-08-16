@@ -51,14 +51,13 @@
         <li class="review">
           <h2 class="message-title" style="color: #432B76; padding: 5px 0;"><em><%= review.user_position %></em> na área <em><%= review.user_area %></em>.</h2>
 
-          <p class="rating-user">
-            <% (review.company.final_rating / 20).times do %>
+          <p class="rating-user"> Total desta avaliação:
+            <% ((review.answer.answer_1 + review.answer.answer_2 + review.answer.answer_3 + review.answer.answer_4 + review.answer.answer_5) / 5).times do %>
               <i class="fas fa-star"></i>
             <% end %>
-            <% if (review.company.final_rating % 20) > 0 %>
+            <% if (review.answer.answer_1 + review.answer.answer_2 + review.answer.answer_3 + review.answer.answer_4 + review.answer.answer_5) % 5 > 0 %>
               <i class="fas fa-star-half"></i>
             <% end %>
-          </p> Total desta avaliação: <%= review.company.final_rating.to_f / 20 %>
 
           <p style="margin: 10px 0 10px 0; padding: 10px; border-left: 1px solid lightgrey; border-top: 1px solid lightgrey;"><%= review.content %></p>
 
