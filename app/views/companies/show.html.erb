@@ -65,17 +65,17 @@
           <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: 'upvote'),
           method: 'post', remote: true do%>
             <% if review.votes.where(user_id: current_user).first.nil? %>
-                <i class="far fa-thumbs-up vote upvote" id="upvote"></i>
+                <i class="far fa-thumbs-up vote upvote" id=<%="upvote-#{review.id}"%>></i>
               <% else %>
-                <i class="<%= review.votes.where(user_id: current_user).first.vote_type == 'upvote' ? "fas   fa-thumbs-up vote upvote" : "far fa-thumbs-up vote upvote"%>" id="upvote"></i>
+                <i class="<%= review.votes.where(user_id: current_user).first.vote_type == 'upvote' ? "fas   fa-thumbs-up vote upvote" : "far fa-thumbs-up vote upvote"%>" id=<%="upvote-#{review.id}"%>></i>
               <% end %>
             <% end %> |
           <%= link_to company_review_votes_path(company_id: @company, review_id: review, vote_type: 'downvote'),
           method: 'post', remote: true do%>
             <% if review.votes.where(user_id: current_user).first.nil? %>
-              <i class="far fa-thumbs-down vote downvote" id="downvote"></i>
+              <i class="far fa-thumbs-down vote downvote" id=<%="downvote-#{review.id}"%>></i>
             <% else %>
-              <i class="<%= review.votes.where(user_id: current_user).first.vote_type == 'downvote' ? "fas fa-thumbs-down vote downvote" : "far fa-thumbs-down vote downvote" %>" id="downvote"></i>
+              <i class="<%= review.votes.where(user_id: current_user).first.vote_type == 'downvote' ? "fas fa-thumbs-down vote downvote" : "far fa-thumbs-down vote downvote" %>" id=<%="downvote-#{review.id}"%>></i>
             <% end %>
           <% end  %>
         </li>

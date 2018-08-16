@@ -3,7 +3,6 @@ class VotesController < ApplicationController
   before_action :set_user
 
   def create
-
       @vote = Vote.new(vote_params)
       @vote.user = @user
       authorize @vote
