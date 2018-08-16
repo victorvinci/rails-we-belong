@@ -40,11 +40,9 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr auto;
-  color: white;
   border: 1px dotted lightgrey;
   margin: 15px;
   padding: 10px;
-  background-color: white;
   color: black;
   grid-gap: 0.5rem;
   box-shadow: 2px 2px 1px $professionalpurple;
@@ -141,7 +139,7 @@
     font-size: 13px;
     margin: 0;
     text-align: end;
-    a {color: $warmred;}
+    a {color: $professionalpurple;}
   }
 }
 
@@ -153,6 +151,7 @@
   grid-row: 1;
   grid-column: 2 / 3;
   padding: 1%;
+  color: $professionalpurple;
 }
 
 .avatar-result-user {
@@ -162,7 +161,7 @@
   grid-column: 1;
   align-self: baseline;
   padding: 10px;
-  color: $calmingblue;
+  color: $professionalpurple;
 }
 
 .rating-user {
