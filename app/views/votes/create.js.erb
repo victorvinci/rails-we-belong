@@ -1,15 +1,8 @@
-function calculateScore() {
-  const reviews = document.getElementById('review-details');
-  reviews.innerHTML = '<%= @review.user_position %> || <%= @review.user_area %> ||Score: <%= @review.weighting  %>'
-
-}
-
 function renderVoteButtons() {
   const voteEmpty = '<%= @review.votes.where(user_id: current_user).first.nil?%>';
-  const upvote = document.getElementById('upvote');
-  const downvote = document.getElementById('downvote');
+  const upvote = document.getElementById(`upvote-<%=@review.id%>`);
+  const downvote = document.getElementById(`downvote-<%=@review.id%>`);
 
-  console.log(voteEmpty);
   if (voteEmpty == 'true') {
     upvote.classList.add('far');
     upvote.classList.remove('fas');
@@ -35,5 +28,4 @@ function fillInIcons(upvote, downvote) {
     }
 }
 
-calculateScore();
 renderVoteButtons();
