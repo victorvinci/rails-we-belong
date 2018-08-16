@@ -15,7 +15,7 @@
             </div>
 
             <div class="form-actions">
-              <%= f.check_box :terms_of_service, id: "terms-check-box" %> <span class="labelText">I agree to the <%= link_to 'Terms of Service', disclaimer_path  %>.</span>
+              <%= f.check_box :terms_of_service, id: "terms-check-box" %> <span class="labelText">Concordo com os<%= link_to 'Termos do Site', disclaimer_path  %>.</span>
               <%= f.button :submit, "Cadastrar", class: "button button-w bg-1 button--border-thin button--round-s", id: "sign-up-button" %>
             </div>
           <% end %>
