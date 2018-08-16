@@ -1,16 +1,16 @@
 <section class="container-results">
 
-  <div class="header-results" style="border-bottom: 5px solid #E59584;">
+  <div class="header-results" style="">
     <h1> <%= @results.size %> resultado(s) para <strong><%= params[:query] %></strong> em Avaliações:</h1>
   </div>
 
   <ul>
     <% @results.each do |result| %>
-      <li class="container-cards" style="box-shadow: 2px 2px 1px #469AE0;">
+      <li class="container-cards" style="">
 
         <i class="avatar-result-user fa fa-user"></i>
 
-        <h2 class="message-title" style="color: #469AE0;"><em><%= result.user_position %></em> na área <em><%= result.user_area %></em>.</h2>
+        <h2 class="message-title" style="color: #432B76"><em><%= result.user_position %></em> na área <em><%= result.user_area %></em>.</h2>
 
         <div class="message-body">
 
