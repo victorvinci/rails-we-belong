@@ -4,9 +4,9 @@
 ul.kf-slider li {
   z-index: 0;
   opacity: 0;
-  -webkit-animation: fade-out 9s infinite both;
-  -moz-animation: fade-out 9s infinite both;
-  animation: fade-out 9s infinite both;
+  -webkit-animation: fade-in 9s 1 both;
+  -moz-animation: fade-in 9s 1 both;
+  animation: fade-in 9s 1 both;
 }
 ul.kf-slider li:nth-child(2) {
   -webkit-animation-delay: 3s;
@@ -16,26 +16,12 @@ ul.kf-slider li:nth-child(2) {
 ul.kf-slider li:nth-child(3) {
   -webkit-animation-delay: 6s;
   -moz-animation-delay: 6s;
-  animation-delay: 6s; }
+  animation-delay: 6s;}
 
 /*----------------------------------------------
 --Fade ins
 -----------------------------------------------  */
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-moz-keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+
 /*----------------------------------------------
 --Fade out for slider
 -----------------------------------------------  */
@@ -54,3 +40,19 @@ ul.kf-slider li:nth-child(3) {
     opacity: 1; }
   66% {
     opacity: 0; } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

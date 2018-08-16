@@ -74,6 +74,7 @@
   box-shadow: 2px 2px #432B76;
   max-height: 450px;
   height: 100%;
+  width: 90%;
 }
 
 .company-profile .graph-container {
@@ -83,10 +84,11 @@
   grid-column: 2 / 4;
   /* margin: 10px 0 0 0; */
   padding: 15px;
-  box-shadow: 2px 2px $professionalpurple;
+  box-shadow: 2px 2px #432B76;
   border: dotted 1px lightgrey;
   max-height: 450px;
   height: 100%;
+  /* width: 94%; */
 }
 
 .company-profile h4 {
@@ -142,7 +144,13 @@
     width: auto;
   }
   .company-profile .graph-container {
-  border: solid 1px lightgrey;
   margin: 15px;
+}
+  .company-profile .company-blurb {
+  margin: 15px;
+ }
+
+ .company-profile .reviews {
+  margin: 10px;
  }
 }

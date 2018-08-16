@@ -1,6 +1,6 @@
 dl {
   display: flex;
-  background-color: white;
+  background-color: #F8F8FF;
   flex-direction: column;
   /* max-width: 100%; */
   position: relative;
@@ -23,7 +23,7 @@ margin-bottom: 20px;
   align-items: center;
   height: 40px;
   width: 130px;
-  background-color: white;
+  background-color: #F8F8FF;
   position: absolute;
   left: 0;
   justify-content: flex-start;
@@ -37,16 +37,16 @@ margin-bottom: 20px;
   margin-left: 130px;
   background: repeating-linear-gradient(
   to right,
-  #ddd,
-  #ddd 1px,
-  #fff 1px,
-  #fff 5%
+  #F8F8FF,
+  #F8F8FF 1px,
+  #F8F8FF 1px,
+  #F8F8FF 5%
 );
 
   &:after {
     content: "";
     display: block;
-    background-color: $calmingblue;
+    background-color: $professionalpurple;
     width: 50px;
     margin-bottom: 10px;
     height: 90%;
