@@ -18,15 +18,18 @@ margin-bottom: 20px;
 }
 
 .text-graph {
-  font-weight: 600;
+  font-weight: bolder;
   display: flex;
   align-items: center;
   height: 40px;
   width: 130px;
   background-color: #F8F8FF;
   position: absolute;
+  padding: 1px;
   left: 0;
+  font-size: 1.2rem;
   justify-content: flex-start;
+  text-transform: capitalize;
 }
 
 .percentage {
@@ -35,10 +38,11 @@ margin-bottom: 20px;
   text-transform: uppercase;
   height: 40px;
   margin-left: 130px;
+  padding: 7px;
   background: repeating-linear-gradient(
   to right,
-  #F8F8FF,
-  #F8F8FF 1px,
+  #202020 ,
+  #202020 1px,
   #F8F8FF 1px,
   #F8F8FF 5%
 );
