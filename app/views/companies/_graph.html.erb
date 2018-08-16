@@ -1,35 +1,29 @@
 <div class="graph-container">
   <dl>
-    <h4>Satisfação Geral</h4>
+    <h4>Satisfação Geral: <c style="color: #FFBE33;"><%= @company.final_rating %>%</c></h4>
     <dd class="percentage percentage-<%= @company.answer_1_average_score %>">
       <span class="text-graph">
-        Funcionarios Diversos
+        Funcionarios Diversos <br> | <%= @company.answer_1_average_score %>%
       </span>
     </dd>
     <dd class="percentage percentage-<%= @company.answer_2_average_score %>">
       <span class="text-graph">
-        Lideres Diversos
+       Lideres Diversos <br> |<%= @company.answer_2_average_score %>%
       </span>
     </dd>
     <dd class="percentage percentage-<%= @company.answer_3_average_score %>">
       <span class="text-graph">
-        Ambiente Seguro
+        Ambiente Seguro <br> | <%= @company.answer_3_average_score %>%
       </span>
     </dd>
       <dd class="percentage percentage-<%= @company.answer_4_average_score %>">
       <span class="text-graph">
-        Acolhimento
+        Acolhimento <br> | <%= @company.answer_4_average_score %>%
       </span>
     </dd>
       <dd class="percentage percentage-<%= @company.answer_5_average_score %>">
       <span class="text-graph">
-        Acesso a oportunidades
-      </span>
-    </dd>
-    </dd>
-      <dd class="percentage percentage-<%= @company.final_rating %>">
-      <span class="text-graph">
-        Avaliação final
+        Acesso a oportunidades <br> | <%= @company.answer_5_average_score %>%
       </span>
     </dd>
   </dl>
