@@ -15,9 +15,6 @@
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
             <%= render "employee_profiles/form" %>
-            <%= f.input :password, label: 'Senha', autocomplete: "off", hint: "deixe em branco caso não deseje alterar", required: false %>
-            <%= f.input :password_confirmation, label: 'Confirmar senha', required: false %>
-            <%= f.input :current_password, label: 'Senha atual', hint: "precisamos da sua senha atual para confirmarmos as alterações", required: true %>
           </div>
           <div class="form-actions">
             <%= f.button :submit, "Atualizar", class: "button button-w bg-1 button--border-thin button--round-s" %>
