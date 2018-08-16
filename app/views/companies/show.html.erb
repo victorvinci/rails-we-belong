@@ -18,7 +18,7 @@
           <% end %>
           <% if (@company.final_rating % 20) > 0 %>
             <i class="fas fa-star-half"></i>
-          <% end %>
+          <% end %> <%= @company.final_rating.to_f / 20 %>
         </p>
   </div>
 
@@ -58,7 +58,7 @@
             <% if (review.company.final_rating % 20) > 0 %>
               <i class="fas fa-star-half"></i>
             <% end %>
-          </p> Esta avaliação foi <%= review.company.final_rating.to_f / 20 %>
+          </p> Total desta avaliação: <%= review.company.final_rating.to_f / 20 %>
 
           <p style="margin: 10px 0 10px 0; padding: 10px; border-left: 1px solid lightgrey; border-top: 1px solid lightgrey;"><%= review.content %></p>
 
