@@ -74,7 +74,8 @@
   box-shadow: 2px 2px #432B76;
   max-height: 450px;
   height: 100%;
-  width: 90%;
+  width: 100%;
+  overflow: auto;
 }
 
 .company-profile .graph-container {

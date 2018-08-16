@@ -9,7 +9,8 @@ gem 'rails', '5.2.0'
 gem 'redis'
 gem 'postmark-rails'
 # gem to transform site in https
-gem 'rack-ssl-enforcer'
+
+gem 'rack-ssl-enforcer', group: :production
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
