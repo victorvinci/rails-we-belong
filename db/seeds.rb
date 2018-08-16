@@ -78,13 +78,12 @@ p "Companies created!"
 Company.all.each do |company|
   5.times do
     review = Review.new
-    review.content = "Seinfeld: #{Faker::Seinfeld.quote} SV: #{Faker::SiliconValley.quote} IT: #{Faker::TheITCrowd.quote}"
+    review.content = "Seinfeld: #{Faker::Lorem.paragraph} SV: #{Faker::Lorem.paragraph} IT: #{Faker::Lorem.paragraph}"
     review.user_area = Faker::Commerce.department
     review.user_position = %w(Manager Assistant Lawyer CEO CFO CTO).sample
     review.weighting = 100
     review.company = company
     review.user = User.first
-    p "creating answer"
     answer = Answer.new
     answer.review = review
     answer.answer_1 = (1..5).to_a.sample
@@ -95,14 +94,12 @@ Company.all.each do |company|
     answer.minority = false
     answer.save!
     review.save!
-    p "calculating scores"
     review.company.answer_1_total_score += review.answer.answer_1 * 20
     review.company.answer_2_total_score += review.answer.answer_2 * 20
     review.company.answer_3_total_score += review.answer.answer_3 * 20
     review.company.answer_4_total_score += review.answer.answer_4 * 20
     review.company.answer_5_total_score += review.answer.answer_5 * 20
     review.company.save!
-    p review.company.answer_5_total_score
   end
 end
 
@@ -113,7 +110,6 @@ Company.all.each do |company|
   company.answer_4_average_score = company.answer_4_total_score / company.reviews.length
   company.answer_5_average_score = company.answer_5_total_score / company.reviews.length
   company.final_rating = (company.answer_1_average_score + company.answer_2_average_score + company.answer_3_average_score + company.answer_4_average_score + company.answer_5_average_score) / 5
-  p company.final_rating
   company.save!
 end
 

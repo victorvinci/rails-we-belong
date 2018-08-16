@@ -9,6 +9,4 @@
    <%= f.input :ethnicity, collection: [["Não quero declarar", "No"], ["Branco", "Branco"], ["Preto", "Preto"], ["Pardo", "Pardo"], ["Amarelo", "Amarelo"], ["Indígena", "Indígena"] ,["Outros", "Outros"]], selected: 'Não quero declarar', label: 'Etnia, Raça ou Cor' %>
   <%= f.input :age_group, collection: [["Não quero declarar", "No"], ["Menos de 18 anos","Menos de 18 anos"], ["de 18 a 24 anos", "de 18 a 24 anos"], ["de 24 a 29 anos", "de 24 a 29 anos"], ["de 30 a 39 anos", "de 30 a 39 anos"], ["de 40 a 49 anos", "de 40 a 49 anos"], ["de 50 a 59 anos", "de 50 a 59 anos"], ["Mais de 60 anos (inclusive)", "Mais de 60 anos (inclusive)"]], selected: 'Não quero declarar', label: "Faixa Etária" %>
   <%= f.input :disability, collection: [["Não quero declarar", "No"], ["Sim", "Sim"], ["Não", "No"]], selected: 'Não quero declarar', label: 'Você se considera pessoa com deficiência?' %>
-
-  <%# f.button :submit, "Create", class: "btn btn-primary" %>
 <% end %>
