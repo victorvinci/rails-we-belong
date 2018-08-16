@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   has_many :reviews, dependent: :nullify
 
-  has_one :employee_profile
+  has_one :employee_profile, dependent: :destroy
   accepts_nested_attributes_for :employee_profile
 
   validates :role, inclusion: { in: %w(employee representative),

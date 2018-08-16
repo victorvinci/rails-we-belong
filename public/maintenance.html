@@ -7,6 +7,10 @@
     <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" />
     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+      <script src="https://cdn.statuspage.io/vendor/moment-timezone-with-data.js"></script>
+      <script src="https://cdn.statuspage.io/vendor/jstz.js"></script>
+      <script src="https://cdn.statuspage.io/vendor/localtimes.js"></script>
 
     <style>
      * {
@@ -221,25 +225,18 @@
   <body class="plain error-page-wrapper background-color background-image">
     <div class="content-container">
   <div class="head-line secondary-text-color">
-    503
+    Manutenção
   </div>
   <div class="subheader primary-text-color">
-    Ih! Parece que o servidor <br>
-    não está se comportando bem hoje.
+    Estamos em manutenção programada<br>
+    no momento.
   </div>
-    <hr>
-    <div class="clearfix"></div>
-    <div class="context primary-text-color">
+  <hr>
+  <div class="clearfix"></div>
+  <div class="context primary-text-color">
 
-    <p>
-      Por favor volte para a página anterior e tente novamente.
-      Se você acha que alguma coisa quebrou, por favor nos avise.
-    </p>
+    <p>Desculpe-nos pela inconveniência. Voltaremos ao ar o mais breve possível!</p>
 
-
-    </div>
-  <div class="buttons-container">
-    <a class="border-button" href="mailto:contato@webelong.com.br" target="_blank">Reporte um Problema</a>
   </div>
 </div>
 
@@ -348,7 +345,7 @@
        });
 
      };
-     var ep = new ErrorPage('body', "503", "plain");
+     var ep = new ErrorPage('body', "maintenance", "plain");
      ep.initialize();
 
      // hack to make sure content stays centered >_<

@@ -2,6 +2,8 @@ function renderVoteButtons() {
   const voteEmpty = '<%= @review.votes.where(user_id: current_user).first.nil?%>';
   const upvote = document.getElementById(`upvote-<%=@review.id%>`);
   const downvote = document.getElementById(`downvote-<%=@review.id%>`);
+  const upcount = document.getElementById(`upcount-<%=@review.id%>`);
+  const downcount = document.getElementById(`downcount-<%=@review.id%>`);
 
   if (voteEmpty == 'true') {
     upvote.classList.add('far');
@@ -11,6 +13,8 @@ function renderVoteButtons() {
   } else {
     fillInIcons(upvote, downvote);
   }
+  upcount.innerHTML = `<%= @review.votes.where(vote_type: 'upvote').count unless @review.votes.where(vote_type: 'upvote').empty? %>`
+  downcount.innerHTML = `<%= @review.votes.where(vote_type: 'downvote').count unless @review.votes.where(vote_type: 'downvote').empty? %>`
 }
 
 function fillInIcons(upvote, downvote) {
@@ -29,3 +33,5 @@ function fillInIcons(upvote, downvote) {
 }
 
 renderVoteButtons();
+
+
