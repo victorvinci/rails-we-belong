@@ -1,4 +1,8 @@
-<h2>Change your password</h2>
+<div class="container" style="width: 56%;">
+
+  <div class="container forgotpassword" style="height: 80px;"></div>
+
+<h2 class="title-fo">Troque sua senha</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -7,7 +11,7 @@
   <%= f.full_error :reset_password_token %>
 
   <div class="form-inputs">
-    <%= f.input :password, label: "Nova senha", required: true, autofocus: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password, label: "Nova senha", required: true, autofocus: true, hint: ("mínimo de #{@minimum_password_length} caracteres" if @minimum_password_length) %>
     <%= f.input :password_confirmation, label: "Confirmar a nova senha", required: true %>
   </div>
 
@@ -16,4 +20,4 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
