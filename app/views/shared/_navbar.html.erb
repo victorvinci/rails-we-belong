@@ -63,7 +63,6 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wb-dropdown-menu">
 
-        <li>
           <div id="custom-search-input-dropdown">
             <div class="input-group col-md-12">
               <%= form_tag searches_index_path, method: :get do %>
@@ -77,6 +76,9 @@
               </span>
             </div>
           </div>
+
+             <li><%= link_to 'Termos de Uso', '/disclaimer', id: 'linkone', class: home_class_for_navbar('navbar-wb-item navbar-wb-link') %></li>
+        <li><%= link_to 'Sobre a WeBelong', '/about', id: 'linktwo', class: home_class_for_navbar('navbar-wb-item navbar-wb-link') %></li>
 
         <% if user_signed_in? %>
 
