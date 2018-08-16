@@ -1,6 +1,6 @@
 
-<h3 style="line-height: 32px;"> Por favor, preencha o cadastro abaixo com seus dados pessoais. </h3>
-<p> Seus dados estarão seguros e suas avaliações serão sempre <strong>anônimas</strong>.</p>
+<h3 style="line-height: 32px;"> Por favor, preencha os campos opcionais abaixo. </h3>
+<p>Seus dados estarão seguros e suas avaliações serão sempre <strong>anônimas</strong>.</p>
 
 <%= simple_fields_for @employee_profile do |f| %>
   <%= f.input :sex, collection: [["Não quero declarar", "No"], ["Homem", "Homem"], ["Mulher", "Mulher"], ["Outro", "Outro"]], selected: 'Não quero declarar', label: 'Sexo Biológico' %>
