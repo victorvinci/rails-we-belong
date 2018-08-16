@@ -25,6 +25,8 @@
     object-fit: cover;
     min-width: 100px;
     min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     image-rendering: optimizequality;
     border: 1px solid lightgrey;
     box-shadow: 2px 2px $professionalpurple;
@@ -74,6 +76,7 @@
   box-shadow: 2px 2px #432B76;
   max-height: 450px;
   height: 100%;
+  overflow: auto;
 }
 
 .company-profile .graph-container {
